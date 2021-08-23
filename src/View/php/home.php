@@ -46,11 +46,9 @@ if (!isset($_SESSION['idUser'])) {
     }
     echo $form->submit('se connecter');
     $form->closeForm();
-    echo $form->button('créer un compte', '/create.php');
 
 } else {
     echo $form->button('se deconnecter', '/logout.php') . "Vous êtes connecté en tant que " . $_SESSION['username']. '<br>';
-    echo $form->button("mettre à jour son compte", "/update.php");
 }
 
 ?>

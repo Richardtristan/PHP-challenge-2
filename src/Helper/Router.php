@@ -21,7 +21,7 @@ class Router{
             array_shift($uri);
             $args = $uri;
 
-            var_dump(getcwd());require '../src/View/php/'. $file . '.php';
+            require '../src/View/php/'. $file . '.php';
 
         }
 
