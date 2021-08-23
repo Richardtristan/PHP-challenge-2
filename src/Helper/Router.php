@@ -1,4 +1,6 @@
 <?php
+namespace App\Helper;
+
 
 class Router{
 
@@ -19,7 +21,7 @@ class Router{
             array_shift($uri);
             $args = $uri;
 
-            require $file . '.php';
+            var_dump(getcwd());require '../src/View/php/'. $file . '.php';
 
         }
 

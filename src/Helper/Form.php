@@ -1,4 +1,5 @@
 <?php
+namespace App\Helper;
 /**
  * classform
  * fast create form

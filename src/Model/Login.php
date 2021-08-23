@@ -1,4 +1,5 @@
 <?php
+namespace App\Model;
 
 class Login
 {
@@ -61,5 +62,12 @@ class Login
         $email->execute([$sessionUse]);
         $mailFetch = $email->fetch();
         return $mailFetch['email'];
+    }
+    public function grade($sessionUse)
+    {
+        $grade = $this->db->prepare("SELECT grade FROM users WHERE id = ?");
+        $grade->execute([$sessionUse]);
+        $gradeFetch = $grade->fetch();
+        return $gradeFetch['grade'];
     }
 }

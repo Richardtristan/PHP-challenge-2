@@ -1,4 +1,8 @@
 <?php
+namespace App\Helper;
+
+use PDO;
+use PDOException;
 
 class ConnectDb
 {
