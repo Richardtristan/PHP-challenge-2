@@ -4,9 +4,7 @@ $request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {
     case '/' :
-        require __DIR__ . '/index.php';
-        break;
-    case '/home' :
+        case '/home' :
         require __DIR__ . '/assets/php/home.php';
         break;
     case '/test' :
