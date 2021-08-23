@@ -8,6 +8,7 @@
     <title>error</title>
 </head>
 <body>
+<p>error 404</p>
 
 </body>
 </html>
