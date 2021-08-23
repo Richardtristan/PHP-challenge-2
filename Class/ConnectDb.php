@@ -1,6 +1,6 @@
 <?php
 
-class Connect
+class ConnectDb
 {
     private $host;
     private $dbname;
