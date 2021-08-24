@@ -25,7 +25,7 @@ if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
         $_SESSION['username'] = $login->username($_SESSION['idUser']);
         $_SESSION['password'] = $login->password($_SESSION['idUser']);
         $_SESSION['email'] = $login->email($_SESSION['idUser']);
-        $_SESSION['grade'] = $login->grade($_SESSION['grade']);
+        $_SESSION['grade'] = $login->grade($_SESSION['idUser']);
     } else {
         echo '<p>password or username is not valid</p>';
     }
@@ -48,5 +48,6 @@ if (!isset($_SESSION['idUser'])) {
 
 } else {
     echo $form->button('se deconnecter', 'logout') . "Vous êtes connecté en tant que " . $_SESSION['username']. '<br>';
+    var_dump($_SESSION);
 }
 

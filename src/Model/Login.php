@@ -26,7 +26,7 @@ class Login
         $log->execute([$this->username]);
         $userExist = $log->fetch();
         if ($userExist) {
-            if ($userExist['username'] == $this->username && password_hash(trim($this->password),PASSWORD_DEFAULT))
+            if ($userExist['username'] === $this->username && $userExist['password'] === password_hash(trim($this->password),PASSWORD_DEFAULT))
                 return true;
         }
         return false;
