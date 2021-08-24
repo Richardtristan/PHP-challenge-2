@@ -25,11 +25,9 @@ class Login
         $log = $this->db->prepare("SELECT username, password FROM users WHERE username = ?");
         $log->execute([$this->username]);
         $userExist = $log->fetch();
-
         if ($userExist) {
-            if ($userExist['username'] === $this->username && password_verify($this->password, $userExist["password"])) {
+            if ($userExist['username'] == $this->username && password_hash(trim($this->password),PASSWORD_DEFAULT))
                 return true;
-            }
         }
         return false;
     }

@@ -41,7 +41,7 @@ echo $form->submit('envoyer');
 $form->closeForm();
 
 if ($issetVar && !$isemptyUsername && $filterEmail && $filterPassword && $filterUsername) {
-    $user = new User(trim($_POST['username']), trim($_POST['email']), password_hash(trim($_POST['password']),PASSWORD_BCRYPT));
+    $user = new User(trim($_POST['username']), trim($_POST['email']), password_hash(trim($_POST['password']),PASSWORD_DEFAULT));
     if ($user->emailExist()) {
         echo 'ce mail existe<br>';
     }
