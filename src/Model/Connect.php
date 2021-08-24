@@ -2,10 +2,12 @@
 
 namespace App\Model;
 
+
+
 use PDO;
 use PDOException;
 
-class ConnectDb
+class Connect
 {
     private $host;
     private $dbname;
@@ -27,10 +29,12 @@ class ConnectDb
         $this->pass = $pass;
 
         try {
-            $this->db = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+            $this->db = new PDO("mysql:host=$host:3306;dbname=$dbname", $user, $pass);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();
+
         }
+
     }
 
     function getPdo()

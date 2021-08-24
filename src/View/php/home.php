@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Model\ConnectDb;
+use App\Model\Connect;
 use App\Helper\Form;
 use App\Model\Login;
 
@@ -15,8 +15,7 @@ $issetVar = isset($_POST['Login']) && isset($_POST['Password']);
 $filterUsername = isset($_POST['Login']) ? filter_var($_POST['Login'], FILTER_SANITIZE_STRING) : null;
 $filterPassword = isset($_POST['Password']) ? filter_var($_POST['Password'], FILTER_SANITIZE_STRING) : null;
 
-$connection = new ConnectDb('127.0.0.1', 'cogip', 'root', '');
-$db = $connection->getPdo();
+
 $form = new Form();
 
 if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
@@ -34,7 +33,7 @@ if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
 
 if (!isset($_SESSION['idUser'])) {
 
-    $form->openForm('post', '#');
+    $form->openForm('post', '');
 
     echo $form->textarea('Login', '');
     if ($isemptyUsername) {
@@ -48,6 +47,6 @@ if (!isset($_SESSION['idUser'])) {
     $form->closeForm();
 
 } else {
-    echo $form->button('se deconnecter', '/logout.php') . "Vous êtes connecté en tant que " . $_SESSION['username']. '<br>';
+    echo $form->button('se deconnecter', 'logout') . "Vous êtes connecté en tant que " . $_SESSION['username']. '<br>';
 }
 
