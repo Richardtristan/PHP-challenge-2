@@ -8,6 +8,7 @@ $request = $_SERVER['REQUEST_URI'];
 $router = new Router($request);
 
 $router->get('/', 'home');
-$router->get('test', 'test');
+$router->get('default', 'default');
 $router->get('home', 'home');
+
 

@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Helper\ConnectDb;
+use App\Model\ConnectDb;
 use App\Helper\Form;
 use App\Model\Login;
 
@@ -51,4 +51,3 @@ if (!isset($_SESSION['idUser'])) {
     echo $form->button('se deconnecter', '/logout.php') . "Vous êtes connecté en tant que " . $_SESSION['username']. '<br>';
 }
 
-?>

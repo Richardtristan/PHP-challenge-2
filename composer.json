@@ -12,5 +12,7 @@
             "email": "richard.tristan.93@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo": "*"
+    }
 }

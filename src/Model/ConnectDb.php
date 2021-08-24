@@ -1,5 +1,6 @@
 <?php
-namespace App\Helper;
+
+namespace App\Model;
 
 use PDO;
 use PDOException;
@@ -31,7 +32,9 @@ class ConnectDb
             echo 'ERROR: ' . $e->getMessage();
         }
     }
-    function getPdo(){
+
+    function getPdo()
+    {
         return $this->db;
     }
 } // class ends
