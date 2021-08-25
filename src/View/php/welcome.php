@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])) {
     header('location: /connect');
 }
 require 'header.php';
@@ -55,4 +55,5 @@ require 'header.php';
             </tr>
         </table>
     </div>
-    <?php require 'footer.php';
+
+<?php require 'footer.php';

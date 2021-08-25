@@ -15,7 +15,7 @@ session_start();
 <body>
 
 <nav class="navbar">
-    <p>Vous êtes connecté en tant que :<?php echo $_SESSION['username'] ?> </p>
+    <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p>
     <ol>
         <li class="home"><a href="#">Home</a></li>
         <li class="invoices"><a href="#">Invoices</a></li>
