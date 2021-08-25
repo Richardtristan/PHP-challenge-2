@@ -21,7 +21,7 @@ class Router{
             array_shift($uri);
             $args = $uri;
 
-            require '../src/View/php/'. $file . '.php';
+            require '../src/Controller/'. $file . '.php';
 
         }
 

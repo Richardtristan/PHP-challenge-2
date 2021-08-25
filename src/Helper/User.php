@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Helper;
 
 class User
@@ -88,6 +89,18 @@ class User
         $EmailUpdate->execute([$post]);
         $mailUpdate = $EmailUpdate->fetch();
         return $mailUpdate;
+    }
+
+    public function Grade($sessionGrade, $navModo, $navAdmin)
+    {
+        switch ($sessionGrade) {
+            case 0:
+                echo $navModo;
+                break;
+            case 1:
+                echo $navAdmin;
+                break;
+        }
     }
 
     public function logout()

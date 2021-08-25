@@ -10,11 +10,12 @@ $db = $connection->getPdo();
 $request = $_SERVER['REQUEST_URI'];
 $router = new Router($request);
 
-$router->get('/', 'home');
-$router->get('default', 'default');
-$router->get('home', 'home');
+$router->get('/', 'LoginController');
+$router->get('login', 'LoginController');
+$router->get('connect', '../View/php/login');
+$router->get('home', 'LoginController');
 $router->get('error_page 404', '404');
-$router->get('create', 'create');
-$router->get('logout', 'logout');
+//$router->get('create', '../View/php/create');
+$router->get('logout', 'LogoutController');
 
 
