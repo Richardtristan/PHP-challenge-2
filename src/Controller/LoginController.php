@@ -16,6 +16,7 @@ $grade = $_SESSION['grade'] = 1 ? 'Modo' : 'Admin';
 
 
 if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
+    var_dump($_POST);
     $login = new Login($_POST['Password'], $_POST['Login']);
     if ($login->login()) {
         $_SESSION['idUser'] = $login->id();
@@ -23,7 +24,7 @@ if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
         $_SESSION['password'] = $login->password($_SESSION['idUser']);
         $_SESSION['email'] = $login->email($_SESSION['idUser']);
         $_SESSION['grade'] = $login->grade($_SESSION['idUser']);
-        header("location: /invoice");
+        header("location: /connected");
     } else {
         echo '<p>password or username is not valid</p>';
     }
