@@ -2,7 +2,7 @@
 ?>
 
 <footer>
-    <P>Vive la COGIP ! </P>
+    <p>Vive la COGIP ! </p>
 </footer>
 </body>
 </html>
