@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -16,14 +15,14 @@ session_start();
 <body>
 
 <nav class="navbar">
-    <p>Vous êtes connecté en tant que :<?php $_SESSION['Login'] ?> </p>
+    <p>Vous êtes connecté en tant que :<?php echo $_SESSION['username'] ?> </p>
     <ol>
         <li class="home"><a href="#">Home</a></li>
         <li class="invoices"><a href="#">Invoices</a></li>
         <li class="compagnies"><a href="#">Compagnies</a></li>
         <li class="contacts"><a href="#">Contacts</a></li>
     </ol>
-    
+
     <input class="Logout"
            type="button"
            value="Log out">
