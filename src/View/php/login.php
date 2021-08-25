@@ -1,4 +1,7 @@
 <?php
+if (isset($_SESSION['username'])){
+    header('location: /welcome');
+}
 session_start();
 ?>
 

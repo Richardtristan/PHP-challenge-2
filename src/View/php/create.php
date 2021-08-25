@@ -38,19 +38,8 @@ if ($isemptyPassword) {
     echo "<p>cette valeur est obligatoire </p>";
 }
 echo $form->submit('envoyer');
+$user = new User(trim($_POST['username']), trim($_POST['email']), password_hash($_POST['password'],PASSWORD_DEFAULT));
 $form->closeForm();
+$user->createUser();
 
-if ($issetVar && !$isemptyUsername && $filterEmail && $filterPassword && $filterUsername) {
-    $user = new User(trim($_POST['username']), trim($_POST['email']), password_hash(trim($_POST['password']),PASSWORD_DEFAULT));
-    if ($user->emailExist()) {
-        echo 'ce mail existe<br>';
-    }
-    if ($user->UsernameExist()){
-        echo 'cette username existe<br>';
-
-    }if (!$user->emailExist() && !$user->UsernameExist()){
-        $user->createUser();
-        echo 'vous êtes inscrit';
-    }
-}
 ?>
