@@ -22,6 +22,3 @@
        value="Log out">
 
 </nav>
-</body>
-</html>
-
