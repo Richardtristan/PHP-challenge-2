@@ -19,7 +19,7 @@ function delete($route, $path_to_include){
 }
 function any($route, $path_to_include){ route($route, $path_to_include); }
 function route($route, $path_to_include){
-  $ROOT = $_SERVER['DOCUMENT_ROOT'];
+  $ROOT = __DIR__;
   if($route == "/404"){
     include_once("$ROOT/$path_to_include");
     exit();
