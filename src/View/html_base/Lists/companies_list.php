@@ -8,9 +8,9 @@
             <th>Country</th>
         </tr>
         <tr>
-            <td>xName</td>
-            <td>xTVA</td>
-            <td>xCountry</td>
+            <td><!--Insert Name--></td>
+            <td><!--Insert TVA--></td>
+            <td><!--Insert Country--></td>
         </tr>
     </table>
     <label for="suppliers">Last invoice :</label>
@@ -21,9 +21,9 @@
             <th>Country</th>
         </tr>
         <tr>
-            <td>xName</td>
-            <td>xTVA</td>
-            <td>xCountry</td>
+            <td><!--Insert Name--></td>
+            <td><!--Insert TVA--></td>
+            <td><!--Insert Country--></td>
         </tr>
     </table>
 </div>

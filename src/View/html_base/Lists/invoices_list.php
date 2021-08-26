@@ -8,9 +8,10 @@
             <th>Type</th>
         </tr>
         <tr>
-            <td>xInvoice number</td>
-            <td>xDates</td>
-            <td>xCompanies</td>
+            <td><!--Insert Invoice number--></td>
+            <td><!--Insert Dates--></td>
+            <td><!--Insert Companies--></td>
+            <td><!--Insert Type--></td>
         </tr>
     </table>
 </div>

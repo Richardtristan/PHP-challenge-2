@@ -7,9 +7,9 @@
             <th>Company</th>
         </tr>
         <tr>
-            <td>xName</td>
-            <td>xTelephone</td>
-            <td>xCompany</td>
+            <td><!--Insert Name--></td>
+            <td><!--Insert Telephone--></td>
+            <td><!--Insert Company--></td>
         </tr>
     </table>
 </div>
