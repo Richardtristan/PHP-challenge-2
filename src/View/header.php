@@ -25,11 +25,11 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="#">Home</a>
+                <a class="navbar-item" href="/home">Home</a>
 
-                <a class="navbar-item" href="#">Invoices</a>
+                <a class="navbar-item" href="/invoice">Invoices</a>
 
-                <a class="navbar-item" href="#">Contacts</a>
+                <a class="navbar-item" href="/contact">Contacts</a>
                 
 
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -57,7 +57,7 @@ session_start();
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
+                        <a class="button is-primary" href="/logout">
                             <strong>Log out</strong>
                         </a>
                     </div>
