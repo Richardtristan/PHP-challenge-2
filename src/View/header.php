@@ -14,7 +14,6 @@ session_start();
     <title>COGIP</title>
 </head>
 <body>
-
     <nav class="navbar" role="navigation" aria-label="main navigation" id='admin'>
         <p>Vous êtes connecté en tant que :<?php echo $_SESSION['username'] ?> </p>
         <div class="navbar-brand">
