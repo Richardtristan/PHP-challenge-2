@@ -33,8 +33,8 @@ $companies->setWelcomeList([
   "c.id"
 ]);
 
-$_SESSION['invoice'] = $invoices->getWelcomeList()->fetch();
-$_SESSION['contact'] = $contacts->getWelcomeList()->fetch();
-$_SESSION['compagnie'] = $companies->getWelcomeList()->fetch();
+$_SESSION['invoice'] = $invoices->getWelcomeList()->fetchAll();
+$_SESSION['contact'] = $contacts->getWelcomeList()->fetchAll();
+$_SESSION['compagnie'] = $companies->getWelcomeList()->fetchAll();
 
 header('location: /home');
