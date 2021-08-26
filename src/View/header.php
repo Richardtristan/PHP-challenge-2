@@ -15,7 +15,7 @@ session_start();
 </head>
 <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id='admin'>
-        <p>Vous êtes connecté en tant que :<?php echo $_SESSION['username'] ?> </p>
+        <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p><br>
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -68,7 +68,7 @@ session_start();
     </nav>
 
     <nav class="navbar" role="navigation" aria-label="main navigation" id='user'>
-        <p>Vous êtes connecté en tant que :<?php echo $_SESSION['username'] ?> </p>
+        <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p><br>
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
