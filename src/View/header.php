@@ -13,8 +13,9 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>COGIP</title>
 </head>
+<?php if(isset($_SESSION['username'])){echo' 
 <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation" id='admin'>
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
 
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -57,15 +58,16 @@ session_start();
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <?php if(isset($_SESSION['username'])){echo'
+                       
                         <a class="button is-primary" href="/logout">
-                             <strong>Log out</strong>' ; } ?>
+                             <strong>Log out</strong>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
+    
 </header>
+' ; } ?>
 <body>
