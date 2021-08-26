@@ -57,8 +57,9 @@ session_start();
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
+                        <?php if(isset($_SESSION['username'])){echo'
                         <a class="button is-primary" href="/logout">
-                            <strong>Log out</strong>
+                             <strong>Log out</strong>' ; } ?>
                         </a>
                     </div>
                 </div>
