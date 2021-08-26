@@ -15,6 +15,28 @@ session_start();
 </head>
 
 <header>
+<?php if(!isset($_SESSION['username'])){echo'
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="user">
+
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/home">Home</a>
+
+                <a class="navbar-item" href="/invoice">Invoices</a>
+
+                <a class="navbar-item" href="/contact">Contacts</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+' ; } ?>
     <?php if(isset($_SESSION['username'])){echo'
 <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
 
@@ -68,7 +90,8 @@ session_start();
             </div>
         </div>
     </nav>
-    
-</header>
+    </header>
 ' ; } ?>
+
+
 <body>
