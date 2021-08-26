@@ -14,7 +14,6 @@ session_start();
     <title>COGIP</title>
 </head>
 <header>
-    <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p><br>
     <nav class="navbar" role="navigation" aria-label="main navigation" id='admin'>
 
         <div class="navbar-brand">
@@ -68,6 +67,7 @@ session_start();
         </div>
     </nav>
     <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p><br>
+
     <nav class="navbar" role="navigation" aria-label="main navigation" id='user'>
 
         <div class="navbar-brand">
@@ -97,5 +97,6 @@ session_start();
             </div>
         </div>
     </nav>
+    <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p><br>
 </header>
 <body>
