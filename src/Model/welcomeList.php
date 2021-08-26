@@ -1,13 +1,22 @@
-<?php
-namespace App\Model;
-class WelcomeList{
-
-
-    public function WelcomeList($tableName)
+<?php namespace App\Model;
+class WelcomeList
+{
+    public function __construct()
     {
-        $invoiceId = $this->db->prepare("SELECT * FROM $tableName ORDER BY date DESC LIMIT 5");
-        $invoiceId->execute();
-        $invoiceIdFetch = $invoiceId->fetch();
-        return $invoiceIdFetch['number'] date company_id;
+        global $db;
+        $this->db = $db;
+        $query;
+    }
+
+    public function setWelcomeList($param)
+    {
+        $query = $this->db->prepare("SELECT $param[0] FROM $param[1] INNER JOIN $param[2] ON $param[3] ORDER BY $param[4] DESC LIMIT 5");
+        $query->execute();
+        $this->query = $query;
+    }
+
+    public function getWelcomeList()
+    {
+        return $this->query;
     }
 }
