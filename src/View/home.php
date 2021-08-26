@@ -1,12 +1,10 @@
 <?php
 
-
 session_start();
 if (!isset($_SESSION['username'])) {
     header('location: /connect');
 }
 require 'header.php';
-require "../Controller/WelcomeListController.php";
 
 ?>
     <body> <!-- Insert header here --> <h1>Welcome to the COGIP</h1>
@@ -17,11 +15,13 @@ require "../Controller/WelcomeListController.php";
             <th>Invoice number</th>
             <th>Dates</th>
             <th>Company</th>
-        </tr> <?php  while ($data = $invoices->getWelcomeList()->fetch()) { ?>
+
+        </tr> <?php  var_dump($_SESSION['invoice']);
+        while ($_SESSION['invoice'] ) { ?>
             <tr>
-                <td><?php echo $data["number"] ?></td>
-                <td><?php echo $data["date"] ?></td>
-                <td><?php echo $data["name"] ?></td>
+                <td><?php  echo $_SESSION['invoice']["number"] ?></td>
+                <td><?php echo $_SESSION['invoice']["date"] ?></td>
+                <td><?php echo $_SESSION['invoice']["name"] ?></td>
             </tr> <?php } ?> </table>
     <label for="contact">Last Contact :</label>
     <table id='contact'>
@@ -29,11 +29,11 @@ require "../Controller/WelcomeListController.php";
             <th>Name</th>
             <th>E-mail</th>
             <th>Company</th>
-        </tr> <?php while ($data = $contacts->getWelcomeList()->fetch()) { ?>
+        </tr> <?php foreach ($_SESSION['contact'] as $contacts) { ?>
             <tr>
-                <td><?php echo $data["firstname"] ?></td>
-                <td><?php echo $data["email"] ?></td>
-                <td><?php echo $data["name"] ?></td>
+                <td><?php echo $contacts["firstname"] ?></td>
+                <td><?php echo $contacts["email"] ?></td>
+                <td><?php echo $contacts["name"] ?></td>
             </tr> <?php } ?> </table>
     <label for="companies">Last Companies :</label>
     <table id='companies'>
@@ -41,10 +41,10 @@ require "../Controller/WelcomeListController.php";
             <th>Name</th>
             <th>E-mail</th>
             <th>Company</th>
-        </tr> <?php while ($data = $companies->getWelcomeList()->fetch()) { ?>
+        </tr> <?php foreach ($_SESSION['compagnie'] as $companies) { ?>
             <tr>
-                <td><?php echo $data["name"] ?></td>
-                <td><?php echo $data["VAT_number"] ?></td>
-                <td><?php echo $data["type"] ?></td>
+                <td><?php echo $companies["name"] ?></td>
+                <td><?php echo $companies["VAT_number"] ?></td>
+                <td><?php echo $companies["type"] ?></td>
             </tr> <?php } ?> </table>
 </div> <?php require 'footer.php';
