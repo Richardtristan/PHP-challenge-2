@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require '../header.php' ?>
 <div>
     <label for="clients">Last invoice :</label>
     <table id='clients'>
@@ -27,4 +27,4 @@
         </tr>
     </table>
 </div>
-<?php require 'footer.php' ?>
+<?php require '../footer.php' ?>

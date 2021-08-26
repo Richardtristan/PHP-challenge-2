@@ -13,9 +13,10 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>COGIP</title>
 </head>
-<?php if(isset($_SESSION['username'])){echo' 
+
 <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
+    <?php if(isset($_SESSION['username'])){echo'
+<nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
 
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -43,13 +44,13 @@ session_start();
                             Members dashboard
                         </a>
                         <a class="navbar-item" href="#">
-                            New contact
+                            Contact
                         </a>
                         <a class="navbar-item" href="#">
-                            New invoice
+                            Invoices
                         </a>
-                        <a class="navbar-item" href="#">
-                            New company
+                        <a class="navbar-item" href="/companies_list">
+                            Compagnies
                         </a>
                     </div>
                 </div>

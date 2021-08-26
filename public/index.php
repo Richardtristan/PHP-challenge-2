@@ -22,6 +22,8 @@ get('/connect', "../src/View/login.php");
 post('/connect','../src/Controller/LoginController.php');
 get('/welcome', "../src/Controller/welcomeListController.php");
 get('/home', "../src/View/home.php");
+get('/companies_list', "../src/Controller/CompaniesListController.php");
+get('/companies_lists', "../src/View/Lists/companies_list.php");
 
 get('/connected', "../src/Controller/LoginController.php");
 get('/logout', "../src/Controller/LogoutController.php");

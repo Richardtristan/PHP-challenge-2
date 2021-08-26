@@ -18,7 +18,7 @@ require 'header.php';
                 <th>Company</th>
             </tr>
             <?php
-            foreach ($_SESSION['invoice'] as $invoice) {
+            foreach ($_SESSION['invoice_welcome'] as $invoice) {
                 ?>
                 <tr>
                     <td><?php echo $invoice["number"] ?></td>
@@ -37,7 +37,7 @@ require 'header.php';
                 <th>Company</th>
             </tr>
             <?php
-            foreach ($_SESSION['contact'] as $contact) {
+            foreach ($_SESSION['contact_welcome'] as $contact) {
                 ?>
                 <tr>
                     <td><?php echo $contact["firstname"] ?></td>
@@ -56,7 +56,7 @@ require 'header.php';
                 <th>Company</th>
             </tr>
             <?php
-            foreach ($_SESSION['compagnie'] as $compagnie) {
+            foreach ($_SESSION['compagnie_welcome'] as $compagnie) {
                 ?>
                 <tr>
                     <td><?php echo $compagnie["name"] ?></td>
