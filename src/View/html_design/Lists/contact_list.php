@@ -10,6 +10,7 @@
             <td><!--Insert Name--></td>
             <td><!--Insert Telephone--></td>
             <td><!--Insert Company--></td>
+            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
         </tr>
     </table>
 </div>

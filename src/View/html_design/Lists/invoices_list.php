@@ -12,6 +12,7 @@
             <td><!--Insert Dates--></td>
             <td><!--Insert Companies--></td>
             <td><!--Insert Type--></td>
+            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
         </tr>
     </table>
 </div>

@@ -32,6 +32,8 @@ session_start();
                 <a class="navbar-item" href="/invoice">Invoices</a>
 
                 <a class="navbar-item" href="/contact">Contacts</a>
+
+                <a class="navbar-item" href="/companies">Companies</a>
             </div>
         </div>
     </nav>
@@ -54,6 +56,8 @@ session_start();
                 <a class="navbar-item" href="/invoice">Invoices</a>
 
                 <a class="navbar-item" href="/contact">Contacts</a>
+
+                <a class="navbar-item" href="/companies">Companies</a>
                 
 
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -66,13 +70,13 @@ session_start();
                             Members dashboard
                         </a>
                         <a class="navbar-item" href="#">
-                            Contact
+                            New contact
                         </a>
                         <a class="navbar-item" href="#">
-                            Invoices
+                            New invoices
                         </a>
                         <a class="navbar-item" href="/companies_list">
-                            Compagnies
+                            new companies
                         </a>
                     </div>
                 </div>

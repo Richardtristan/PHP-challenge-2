@@ -19,6 +19,7 @@
             <td><!--Insert Dates--></td>
             <td><!--Insert Company--></td>
             <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
+            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
         </tr>
     </table>
 </div>
@@ -37,6 +38,7 @@
             <td><!--Insert Email--></td>
             <td><!--Insert Company--></td>
             <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
+            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
         </tr>
     </table>
 </div>
@@ -55,6 +57,7 @@
             <td><!--Insert Country--></td>
             <td><!--Insert Type--></td>
             <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
+            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
         </tr>
     </table>
 </div>

@@ -11,6 +11,7 @@
             <td><!--Insert Name--></td>
             <td><!--Insert TVA--></td>
             <td><!--Insert Country--></td>
+            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
         </tr>
     </table>
     <label for="suppliers">Last invoice :</label>
@@ -24,6 +25,7 @@
             <td><!--Insert Name--></td>
             <td><!--Insert TVA--></td>
             <td><!--Insert Country--></td>
+            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
         </tr>
     </table>
 </div>
