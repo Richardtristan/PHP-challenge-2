@@ -1,5 +1,5 @@
-<?php require 'header.php' ?>
-<h1>Company : <!--Insert company name--></h1>
+<?php require __DIR__.'/../surround/header.php'; var_dump($id);?>
+    <h1>Company : <!--Insert company name--></h1>
 <div>
     <table>
         <tr>
@@ -42,4 +42,4 @@
         </tr>
     </table>
 </div>
-<?php require 'footer.php' ?>
+<?php require __DIR__.'/../surround/footer.php' ?>

@@ -10,7 +10,7 @@
         <?php foreach ($_SESSION['companies_all'] as $companie) {
             ?>
             <tr>
-                <td><?php echo $companie["name"] ?></td>
+                <td><a href="/companies_detail/id/<?php echo $companie['id_company']?>"><?php echo $companie["name"] ?></a></td>
                 <td><?php echo $companie["VAT_number"] ?></td>
                 <td><?php echo $companie["country"] ?></td>
             </tr>
