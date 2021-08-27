@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require __DIR__.'/../surround/header.php' ?>
 <div>
     <table id='invoice_list'>
         <tr>
@@ -7,13 +7,17 @@
             <th>Companies</th>
             <th>Type</th>
         </tr>
+        <?php foreach ($_SESSION['invoices_all'] as $invoice) {
+        ?>
         <tr>
-            <td><!--Insert Invoice number--></td>
-            <td><!--Insert Dates--></td>
-            <td><!--Insert Companies--></td>
-            <td><!--Insert Type--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
+            <td><?php echo $invoice["number"] ?></td>
+            <td><?php echo $invoice["date"] ?></td>
+            <td><?php echo $invoice["name"] ?></td>
+            <td><?php echo $invoice["type"] ?></td>
         </tr>
+        <?php
+            }
+            ?>
     </table>
 </div>
-<?php require 'footer.php' ?>
+<?php require __DIR__.'./../surround/footer.php' ?>

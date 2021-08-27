@@ -8,7 +8,7 @@ $companies = new AllList();
 
 
 $companies->setAllList([
-    "c.name, VAT_number, t.name as type",
+    "c.name, VAT_number, country, t.name as type",
     "company as c",
     "type as t",
     "c.type_id = t.id",
@@ -16,6 +16,6 @@ $companies->setAllList([
 ]);
 
 
-$_SESSION['compagnie_all'] = $companies->getAllList()->fetchAll();
+$_SESSION['companies_all'] = $companies->getAllList()->fetchAll();
 
-header('location: /companies_lists');
+header('location: /companies_list');

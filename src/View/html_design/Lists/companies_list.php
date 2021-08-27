@@ -1,32 +1,22 @@
-<?php require 'header.php' ?>
+<?php require __DIR__.'/../surround/header.php' ?>
 <div>
-    <label for="clients">Clients</label>
-    <table id='clients'>
+    <label for="companies">List of companies :</label>
+    <table id='compagnies'>
         <tr>
             <th>Name</th>
-            <th>TVA</th>
+            <th>VAT</th>
             <th>Country</th>
         </tr>
-        <tr>
-            <td><!--Insert Name--></td>
-            <td><!--Insert TVA--></td>
-            <td><!--Insert Country--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-        </tr>
-    </table>
-    <label for="suppliers">Suppliers</label>
-    <table id='suppliers'>
-        <tr>
-            <th>Name</th>
-            <th>TVA</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td><!--Insert Name--></td>
-            <td><!--Insert TVA--></td>
-            <td><!--Insert Country--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-        </tr>
+        <?php foreach ($_SESSION['companies_all'] as $companie) {
+            ?>
+            <tr>
+                <td><?php echo $companie["name"] ?></td>
+                <td><?php echo $companie["VAT_number"] ?></td>
+                <td><?php echo $companie["country"] ?></td>
+            </tr>
+            <?php
+        }
+        ?>
     </table>
 </div>
-<?php require 'footer.php' ?>
+<?php require __DIR__.'/../surround/footer.php' ?>
