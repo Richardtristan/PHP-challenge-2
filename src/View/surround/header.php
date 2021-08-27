@@ -77,7 +77,7 @@ session_start();
                         <a class="navbar-item" href="#">
                             New invoices
                         </a>
-                        <a class="navbar-item" href="/companies_list">
+                        <a class="navbar-item" href="">
                             new companies
                         </a>
                     </div>
