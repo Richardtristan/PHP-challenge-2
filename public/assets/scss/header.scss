@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    .navbar-item, .navbar-link {
+        color: black; 
+        .navbar-dropdown .navbar-item{
+          color: black;
+        }
+    }
+    p {
+      text-align: center;
+  }
+  }
+  
+  #gradient
+  {
+   width: 100%;
+   height: 800px;
+   padding: 0px;
+   margin: 0px;
+  }
