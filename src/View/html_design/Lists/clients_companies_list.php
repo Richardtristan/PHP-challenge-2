@@ -1,6 +1,6 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 <div>
-    <label for="companies">List of companies :</label>
+    <label for="companies">List of clients companies :</label>
     <table id='compagnies'>
         <tr>
             <th>Name</th>

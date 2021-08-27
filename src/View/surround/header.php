@@ -9,10 +9,12 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="<?php dirname(__FILE__)?>../../../../assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/blob.css">
     <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="<?php dirname(__FILE__)?>../../../../assets/css/header.css">
     <title>COGIP</title>
 </head>
 
@@ -42,7 +44,8 @@ session_start();
     </header>
 ' ; } ?>
     <?php if(isset($_SESSION['username'])){echo'
-<nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
+    <div id="gradient">
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
 
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -59,8 +62,20 @@ session_start();
 
                 <a class="navbar-item" href="/contact">Contacts</a>
 
-                <a class="navbar-item" href="/companies">Companies</a>
-                
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="#" >
+                        Companies
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/companies">
+                            Clients
+                        </a>
+                        <a class="navbar-item" href="/companies">
+                            Suppliers
+                        </a>
+                    </div>
+                </div>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
@@ -96,7 +111,9 @@ session_start();
             </div>
         </div>
     </nav>
+    </div>
     </header>
+
 ' ; } ?>
 
 
