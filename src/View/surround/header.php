@@ -1,21 +1,23 @@
 <?php
 session_start();
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="../../public/assets/js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../public/assets/css/main.css">
+    <script type="text/javascript" src="<?php dirname(__FILE__)?>../../../../assets/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/blob.css">
+    <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>COGIP</title>
 </head>
 
 <header>
-<?php if(!isset($_SESSION['username'])){echo'
+    <?php if(!isset($_SESSION['username'])){echo'
     <nav class="navbar" role="navigation" aria-label="main navigation" id="user">
 
         <div class="navbar-brand">
@@ -98,4 +100,4 @@ session_start();
 ' ; } ?>
 
 
-<body>
+    <body>

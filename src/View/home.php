@@ -3,8 +3,7 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header('location: /connect');
 }
-require 'header.php';
-
+require 'surround/header.php';
 
 ?>
     <h1>Welcome to the COGIP</h1>
@@ -69,4 +68,4 @@ require 'header.php';
         </table>
     </div>
 
-<?php require 'footer.php';
+<?php require 'surround/footer.php';
