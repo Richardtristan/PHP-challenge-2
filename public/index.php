@@ -28,6 +28,8 @@ get('/contact', "../src/Controller/ContactListController.php");
 get('/contact_list', "../src/View/Lists/contact_list.php");
 get('/companies', "../src/Controller/CompaniesListController.php");
 get('/companies_list', "../src/View/Lists/companies_list.php");
+get('/companies_detail/id/$id', "../src/View/Details/company_details.php");
+
 
 
 get('/connected', "../src/Controller/LoginController.php");

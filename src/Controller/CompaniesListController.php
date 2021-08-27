@@ -8,7 +8,7 @@ $companies = new AllList();
 
 
 $companies->setAllList([
-    "c.name, VAT_number, country, t.name as type",
+    "c.id as id_company, c.name, VAT_number, country, t.name as type",
     "company as c",
     "type as t",
     "c.type_id = t.id",
