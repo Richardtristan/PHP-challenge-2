@@ -1,6 +1,6 @@
 <?php require 'header.php' ?>
 <div>
-    <label for="clients">Last invoice :</label>
+    <label for="clients">Clients</label>
     <table id='clients'>
         <tr>
             <th>Name</th>
@@ -14,7 +14,7 @@
             <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
         </tr>
     </table>
-    <label for="suppliers">Last invoice :</label>
+    <label for="suppliers">Suppliers</label>
     <table id='suppliers'>
         <tr>
             <th>Name</th>

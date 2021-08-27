@@ -3,7 +3,7 @@
     <table id='contact_list'>
         <tr>
             <th>Name</th>
-            <th>Telephone</th>
+            <th>email</th>
             <th>Company</th>
         </tr>
         <tr>
