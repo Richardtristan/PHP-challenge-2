@@ -31,7 +31,7 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="/home">Home</a>
+                <a class="navbar-item" href="/login">Home</a>
 
                 <a class="navbar-item" href="/invoice">Invoices</a>
 
@@ -63,15 +63,15 @@ session_start();
                 <a class="navbar-item" href="/contact">Contacts</a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="#" >
+                    <a class="navbar-link" href="/companies" >
                         Companies
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/companies">
+                        <a class="navbar-item" href="/companies_client">
                             Clients
                         </a>
-                        <a class="navbar-item" href="/companies">
+                        <a class="navbar-item" href="/companies_suppliers">
                             Suppliers
                         </a>
                     </div>
@@ -83,17 +83,17 @@ session_start();
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="#">
+                        <a class="navbar-item" href="/member_dashboard">
                             Members dashboard
                         </a>
-                        <a class="navbar-item" href="#">
+                        <a class="navbar-item" href="/new_contact">
                             New contact
                         </a>
-                        <a class="navbar-item" href="#">
+                        <a class="navbar-item" href="/new_invoice">
                             New invoices
                         </a>
-                        <a class="navbar-item" href="">
-                            new companies
+                        <a class="navbar-item" href="/new_companies">
+                            New companies
                         </a>
                     </div>
                 </div>
