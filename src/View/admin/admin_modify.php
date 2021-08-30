@@ -12,8 +12,6 @@
         <input type="text" name="contact" id="contact">
         <label for="email">Modify e-mail</label>
         <input type="email" name="email" id="email">
-        <label for="phone">Modify phone number</label>
-        <input type="tel" name="phone" id="phone">
         <label for="invoice">Modify invoice number</label>
         <input type="text" name="invoice" id="invoice">
     </form>
