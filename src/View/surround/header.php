@@ -20,7 +20,7 @@ session_start();
 
 <header>
     <?php if(!isset($_SESSION['username'])){echo'
-    <nav class="navbar" role="navigation" aria-label="main navigation" id="user">
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
 
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
