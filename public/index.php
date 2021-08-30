@@ -21,10 +21,11 @@ get('/login', "../src/Controller/LoginController.php");
 get('/invoice', "../src/Controller/InvoicesListController.php");
 get('/contact', "../src/Controller/ContactListController.php");
 get('/companies', "../src/Controller/CompaniesListController.php");
-get('/companies_detail/id/$id', "../src/View/Details/company_details.php");
+get('/companies_detail/id/$id', "../src/Controller/CompanyDetailController.php");
 get('/logout', "../src/Controller/LogoutController.php");
 get('/create', "../src/View/create.php");
 get('/home', "../src/Controller/WelcomeListController.php");
+
 
 
 post('/', "../src/Controller/LoginController.php");
