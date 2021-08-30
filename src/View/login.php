@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['username'])) {
-    header('location: /');
+    header('location: /home');
 }
 session_start();
 

@@ -20,7 +20,7 @@ session_start();
 
 <header>
     <?php if(!isset($_SESSION['username'])){echo'
-    <nav class="navbar" role="navigation" aria-label="main navigation" id="user">
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
 
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -31,7 +31,6 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-            
                 <a class="navbar-item" href="/login">Home</a>
 
                 <a class="navbar-item" href="/invoice">Invoices</a>
@@ -69,7 +68,7 @@ session_start();
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/companies_clients">
+                        <a class="navbar-item" href="/companies_client">
                             Clients
                         </a>
                         <a class="navbar-item" href="/companies_suppliers">
@@ -84,17 +83,17 @@ session_start();
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="#">
+                        <a class="navbar-item" href="/member_dashboard">
                             Members dashboard
                         </a>
-                        <a class="navbar-item" href="#">
+                        <a class="navbar-item" href="/new_contact">
                             New contact
                         </a>
-                        <a class="navbar-item" href="#">
+                        <a class="navbar-item" href="/new_invoice">
                             New invoices
                         </a>
-                        <a class="navbar-item" href="">
-                            new companies
+                        <a class="navbar-item" href="/new_companies">
+                            New companies
                         </a>
                     </div>
                 </div>
