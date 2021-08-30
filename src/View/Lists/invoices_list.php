@@ -1,4 +1,4 @@
-<?php require __DIR__.'/../surround/header.php' ?>
+<?php require __DIR__.'/../surround/header.php'; ?>
 <div>
     <table id='invoice_list'>
         <tr>
@@ -7,7 +7,7 @@
             <th>Companies</th>
             <th>Type</th>
         </tr>
-        <?php foreach ($_SESSION['invoices_all'] as $invoice) {
+        <?php foreach ($invoices as $invoice) {
         ?>
         <tr>
             <td><?php echo $invoice["number"] ?></td>

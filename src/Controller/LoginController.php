@@ -24,14 +24,15 @@ if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
         $_SESSION['password'] = $login->password($_SESSION['idUser']);
         $_SESSION['email'] = $login->email($_SESSION['idUser']);
         $_SESSION['grade'] = $login->grade($_SESSION['idUser']);
-        header("location: /welcome");
+
+        require __DIR__.'/../view/home.php';
     } else {
         echo '<p>password or username is not valid</p>';
     }
 }
 
 if (!isset($_SESSION['idUser'])) {
-   header("location: /connect");
+    require __DIR__.'/../view/login.php';
 }
 
 

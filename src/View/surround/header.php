@@ -63,15 +63,15 @@ session_start();
                 <a class="navbar-item" href="/contact">Contacts</a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="#" >
+                    <a class="navbar-link" href="/companies" >
                         Companies
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/companies">
+                        <a class="navbar-item" href="/companies_clients">
                             Clients
                         </a>
-                        <a class="navbar-item" href="/companies">
+                        <a class="navbar-item" href="/companies_suppliers">
                             Suppliers
                         </a>
                     </div>

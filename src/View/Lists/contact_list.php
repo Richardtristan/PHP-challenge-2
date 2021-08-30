@@ -7,12 +7,12 @@
             <th>Email</th>
             <th>Company</th>
         </tr>
-        <?php foreach ($_SESSION['contact_all'] as $contact) {
+        <?php foreach ($contact as $data) {
             ?>
             <tr>
-                <td><?php echo $contact["firstname"] . ' ' . $contact["lastname"]?></td>
-                <td><?php echo $contact["email"] ?></td>
-                <td><?php echo $contact["name"] ?></td>
+                <td><?php echo $data["firstname"] . ' ' . $data["lastname"]?></td>
+                <td><?php echo $data["email"] ?></td>
+                <td><?php echo $data["name"] ?></td>
             </tr>
             <?php
         }

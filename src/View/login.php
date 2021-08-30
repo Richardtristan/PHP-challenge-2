@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['username'])) {
-    header('location: /welcome');
+    header('location: /login');
 }
 session_start();
 require 'surround/header.php';

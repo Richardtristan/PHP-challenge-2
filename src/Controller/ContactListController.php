@@ -15,6 +15,9 @@ $contacts->setAllList([
   "p.id"
 ]);
 
-$_SESSION['contact_all'] = $contacts->getAllList()->fetchAll();
+$contact = $contacts->getAllList()->fetchAll();
+require __DIR__.'/../view/Lists/contact_list.php';
 
-header('location: /contact_list');
+//$_SESSION['contact_all'] = $contacts->getAllList()->fetchAll();
+
+//header('location: /contact_list');
