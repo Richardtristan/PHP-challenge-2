@@ -14,7 +14,9 @@ $invoicesAll->setAllList([
   "date"
 ]);
 
+$invoices = $invoicesAll->getAllList()->fetchAll();
+require __DIR__.'/../view/Lists/invoices_list.php';
 
-$_SESSION['invoices_all'] = $invoicesAll->getAllList()->fetchAll();
+//$_SESSION['invoices_all'] = $invoicesAll->getAllList()->fetchAll();
 
-header('location: /invoices_list');
+//header('location: /invoices_list');

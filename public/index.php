@@ -18,25 +18,22 @@ $db = $connection->getPdo();
 
 get('/', "../src/Controller/LoginController.php");
 get('/login', "../src/Controller/LoginController.php");
-get('/connect', "../src/View/login.php");
-post('/connect','../src/Controller/LoginController.php');
-get('/welcome', "../src/Controller/welcomeListController.php");
-get('/home', "../src/View/home.php");
 get('/invoice', "../src/Controller/InvoicesListController.php");
-get('/invoices_list', "../src/View/Lists/invoices_list.php");
 get('/contact', "../src/Controller/ContactListController.php");
-get('/contact_list', "../src/View/Lists/contact_list.php");
 get('/companies', "../src/Controller/CompaniesListController.php");
-get('/companies_list', "../src/View/Lists/companies_list.php");
-get('/companies_detail/id/$id', "../src/View/Details/company_details.php");
-
-
-
-get('/connected', "../src/Controller/LoginController.php");
+get('/companies_detail/id/$id', "../src/Controller/CompanyDetailController.php");
 get('/logout', "../src/Controller/LogoutController.php");
 get('/create', "../src/View/create.php");
+get('/home', "../src/Controller/WelcomeListController.php");
+
+
+
+post('/', "../src/Controller/LoginController.php");
+post('/login', "../src/Controller/LoginController.php");
 post('/create', "../src/View/create.php");
-post('/connected', "../src/View/LoginController.php");
+
+
+
 
 
 

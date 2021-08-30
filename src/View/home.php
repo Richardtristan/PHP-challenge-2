@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('location: /connect');
+    header('location: /login');
 }
 require 'surround/header.php';
 
@@ -17,12 +17,12 @@ require 'surround/header.php';
                 <th>Company</th>
             </tr>
             <?php
-            foreach ($_SESSION['invoice_welcome'] as $invoice) {
+            foreach ($invoice as $data) {
                 ?>
                 <tr>
-                    <td><?php echo $invoice["number"] ?></td>
-                    <td><?php echo $invoice["date"] ?></td>
-                    <td><?php echo $invoice["name"] ?></td>
+                    <td><?php echo $data["number"] ?></td>
+                    <td><?php echo $data["date"] ?></td>
+                    <td><?php echo $data["name"] ?></td>
                 </tr>
                 <?php
             }
@@ -36,12 +36,12 @@ require 'surround/header.php';
                 <th>Company</th>
             </tr>
             <?php
-            foreach ($_SESSION['contact_welcome'] as $contact) {
+            foreach ($contact as $data) {
                 ?>
                 <tr>
-                    <td><?php echo $contact["firstname"] ?></td>
-                    <td><?php echo $contact["email"] ?></td>
-                    <td><?php echo $contact["name"] ?></td>
+                    <td><?php echo $data["firstname"] ?></td>
+                    <td><?php echo $data["email"] ?></td>
+                    <td><?php echo $data["name"] ?></td>
                 </tr>
                 <?php
             }
@@ -55,12 +55,12 @@ require 'surround/header.php';
                 <th>Company</th>
             </tr>
             <?php
-            foreach ($_SESSION['compagnie_welcome'] as $compagnie) {
+            foreach ($company as $data) {
                 ?>
                 <tr>
-                    <td><?php echo $compagnie["name"] ?></td>
-                    <td><?php echo $compagnie["VAT_number"] ?></td>
-                    <td><?php echo $compagnie["type"] ?></td>
+                    <td><?php echo $data["name"] ?></td>
+                    <td><?php echo $data["VAT_number"] ?></td>
+                    <td><?php echo $data["type"] ?></td>
                 </tr>
                 <?php
             }
