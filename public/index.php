@@ -22,14 +22,15 @@ get('/invoice', "../src/Controller/InvoicesListController.php");
 get('/contact', "../src/Controller/ContactListController.php");
 get('/companies', "../src/Controller/CompaniesListController.php");
 get('/companies_detail/id/$id', "../src/View/Details/company_details.php");
-
-
-
-get('/connected', "../src/Controller/LoginController.php");
 get('/logout', "../src/Controller/LogoutController.php");
 get('/create', "../src/View/create.php");
-post('/create', "../src/View/create.php");
+
+post('/', "../src/Controller/WelcomeListController.php");
 post('/login', "../src/Controller/WelcomeListController.php");
+post('/create', "../src/View/create.php");
+
+
+
 
 
 

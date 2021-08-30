@@ -16,7 +16,7 @@ $grade = $_SESSION['grade'] = 1 ? 'Modo' : 'Admin';
 
 
 if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
-
+var_dump($_SESSION);
     $login = new Login($_POST['Password'], $_POST['Login']);
     if ($login->login()) {
         $_SESSION['idUser'] = $login->id();

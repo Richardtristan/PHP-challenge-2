@@ -1,8 +1,9 @@
 <?php
 if (isset($_SESSION['username'])) {
-    header('location: /login');
+    header('location: /');
 }
 session_start();
+var_dump($_SESSION);
 require 'surround/header.php';
 ?>
     <!-- insert header here -->
