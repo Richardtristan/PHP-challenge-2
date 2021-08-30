@@ -19,8 +19,15 @@
             <th>Name</th>
             <th>Email</th>
         </tr>
-        <th><!--Insert contact name--></th>
-        <th><!--Insert contact email--></th>
+        <?php foreach ($contacts as $contact) {
+        ?>
+        <tr>
+            <td><?php echo $contact["firstname"] . " " . $contact["lastname"] ?></td>
+            <td><?php echo $contact["email"] ?></td>
+        </tr>
+        <?php
+            }
+            ?>
     </table>
 </div>
 <div>
@@ -31,21 +38,15 @@
             <th>Date</th>
             <th>Contact person</th>
         </tr>
-        <tr>
-            <td><!--Insert Invoice number--></td>
-            <td><!--Insert Date--></td>
-            <td><!--Insert Contact person--></td>
-        </tr>
-        <?php foreach ($linkedData as $invoice) {
-        ?>
+        <?php foreach ($invoices as $invoice)
+        { ?>
         <tr>
             <td><?php echo $invoice["number"] ?></td>
             <td><?php echo $invoice["date"] ?></td>
             <td><?php echo $invoice["email"] ?></td>
         </tr>
         <?php
-            }
-            ?>
+        } ?>
     </table>
 </div>
 <?php require __DIR__.'/../surround/footer.php' ?>

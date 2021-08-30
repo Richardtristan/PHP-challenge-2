@@ -1,4 +1,7 @@
-<?php namespace App\Model;
+<?php
+
+namespace App\Model;
+
 class WelcomeList
 {
     public function __construct()

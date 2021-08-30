@@ -1,21 +1,15 @@
 <?php
 
-use App\Model\AllList;
+use App\Model\ContactList;
 
 
-$contacts = new AllList();
+$contacts = new ContactList();
 
 
 
-$contacts->setAllList([
-  "*",
-  "people as p",
-  "company as c",
-  "p.company_id = c.id",
-  "p.id"
-]);
+$contacts->setAllList();
 
-$contact = $contacts->getAllList()->fetchAll();
+$contacts = $contacts->getAllList()->fetchAll();
 require __DIR__.'/../view/Lists/contact_list.php';
 
 //$_SESSION['contact_all'] = $contacts->getAllList()->fetchAll();
