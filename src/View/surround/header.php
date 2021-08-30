@@ -31,6 +31,7 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+            
                 <a class="navbar-item" href="/login">Home</a>
 
                 <a class="navbar-item" href="/invoice">Invoices</a>
@@ -56,7 +57,7 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="/login">Home</a>
+                <a class="navbar-item" href="/home">Home</a>
 
                 <a class="navbar-item" href="/invoice">Invoices</a>
 

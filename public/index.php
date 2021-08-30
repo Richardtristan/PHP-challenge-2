@@ -24,9 +24,11 @@ get('/companies', "../src/Controller/CompaniesListController.php");
 get('/companies_detail/id/$id', "../src/View/Details/company_details.php");
 get('/logout', "../src/Controller/LogoutController.php");
 get('/create', "../src/View/create.php");
+get('/home', "../src/Controller/WelcomeListController.php");
 
-post('/', "../src/Controller/WelcomeListController.php");
-post('/login', "../src/Controller/WelcomeListController.php");
+
+post('/', "../src/Controller/LoginController.php");
+post('/login', "../src/Controller/LoginController.php");
 post('/create', "../src/View/create.php");
 
 
