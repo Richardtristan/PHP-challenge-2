@@ -27,7 +27,7 @@ class Connect
         $this->pass = $pass;
 
         try {
-            $this->db = new PDO("mysql:host=$host:3306;dbname=$dbname", $user, $pass);
+            $this->db = new PDO("mysql:host=$host:8889;dbname=$dbname", $user, $pass);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();
 
