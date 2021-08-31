@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require __DIR__.'/../surround/header.php' ?>
 
 <form action="" method='POST'>
 
@@ -18,4 +18,4 @@
 <input type="submit" value="Submit">
 </form>
 
-<?php require 'footer.php' ?>
+<?php require __DIR__.'/../surround/footer.php' ?>

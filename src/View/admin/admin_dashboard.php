@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require __DIR__.'/../surround/header.php' ?>
 
 <div class='table'>
     <label for="companyInfo">Changing informations</label>
@@ -24,4 +24,4 @@
     </table>
 </div>
 
-<?php require 'footer.php' ?>
+<?php require __DIR__.'/../surround/footer.php' ?>
