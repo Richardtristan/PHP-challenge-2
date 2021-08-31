@@ -7,12 +7,12 @@
             <th>VAT</th>
             <th>Country</th>
         </tr>
-        <?php foreach ($_SESSION['companies_all'] as $companie) {
+        <?php foreach ($providers as $data) {
             ?>
             <tr>
-                <td><?php echo $companie["name"] ?></td>
-                <td><?php echo $companie["VAT_number"] ?></td>
-                <td><?php echo $companie["country"] ?></td>
+                <td><?php echo $data["name"] ?></td>
+                <td><?php echo $data["VAT_number"] ?></td>
+                <td><?php echo $data["country"] ?></td>
             </tr>
             <?php
         }

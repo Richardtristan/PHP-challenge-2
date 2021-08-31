@@ -4,7 +4,7 @@ require_once("router.php");
 use App\Model\Connect;
 use App\Model\WelcomeList;
 
-$connection = new Connect('127.0.0.1', 'cogip', 'root', '');
+$connection = new Connect('127.0.0.1', 'cogip', 'root', 'root');
 $db = $connection->getPdo();
 
 
@@ -23,6 +23,9 @@ get('/invoice_details/id/$id', "../src/Controller/InvoiceDetailsController.php")
 get('/contact', "../src/Controller/ContactListController.php");
 get('/contact_details/id/$id', "../src/Controller/ContactDetailsController.php");
 get('/companies', "../src/Controller/CompaniesListController.php");
+get('/supplier', "../src/Controller/TypedCompanyListController.php");
+get('/companies_client', "../src/Controller/ClientCompaniesController.php");
+get('/companies_suppliers', "../src/Controller/ProviderCompaniesController.php");
 get('/companies_detail/id/$id', "../src/Controller/CompanyDetailController.php");
 get('/logout', "../src/Controller/LogoutController.php");
 get('/create', "../src/View/create.php");
