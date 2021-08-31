@@ -20,8 +20,14 @@ session_start();
 
 <header>
     <?php if(!isset($_SESSION['username'])){echo'
+    <div id="gradient">
     <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
-
+    <svg viewbox="0 0 100 100" preserveAspectRatio="none" class="svg1">
+        <polygon fill="white" points="0,100 135,0 100,100"></polygon> 
+    </svg>
+    <svg viewbox="0 0 100 100" preserveAspectRatio="none" class="svg2">
+        <polygon fill="#CCFFFF" points="60,0 100,0 100,100"></polygon> <!--Thx to Key-->
+    </svg>
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -41,12 +47,18 @@ session_start();
             </div>
         </div>
     </nav>
+    </div>
     </header>
 ' ; } ?>
     <?php if(isset($_SESSION['username'])){echo'
     <div id="gradient">
     <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
-
+    <svg viewbox="0 0 100 100" preserveAspectRatio="none" class="svg1">
+        <polygon fill="white" points="0,100 135,0 100,100"></polygon> 
+    </svg>
+    <svg viewbox="0 0 100 100" preserveAspectRatio="none" class="svg2">
+        <polygon fill="#CCFFFF" points="60,0 100,0 100,100"></polygon> <!--Thx to Key-->
+    </svg>
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
