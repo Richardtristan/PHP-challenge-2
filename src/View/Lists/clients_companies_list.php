@@ -10,7 +10,7 @@
         <?php foreach ($clients as $data) {
             ?>
             <tr>
-                <td><?php echo $data["name"] ?></td>
+                <td><a href="/companies_detail/id/<?php echo $data['id_company']?>"><?php echo $data["name"] ?></a></td>
                 <td><?php echo $data["VAT_number"] ?></td>
                 <td><?php echo $data["country"] ?></td>
             </tr>
