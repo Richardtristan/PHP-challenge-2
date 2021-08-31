@@ -20,7 +20,6 @@ session_start();
 
 <header>
     <?php if(!isset($_SESSION['username'])){echo'
-    <div id="gradient">
     <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
     <svg viewbox="0 0 100 100" preserveAspectRatio="none" class="svg1">
         <polygon fill="white" points="0,100 135,0 100,100"></polygon> 
@@ -37,6 +36,7 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+            <img src="/cogip/public/assets/img/logo.png" alt="logo" style="margin-left: -100px;">
                 <a class="navbar-item" href="/login">Home</a>
 
                 <a class="navbar-item" href="/invoice">Invoices</a>
@@ -47,11 +47,9 @@ session_start();
             </div>
         </div>
     </nav>
-    </div>
     </header>
 ' ; } ?>
     <?php if(isset($_SESSION['username'])){echo'
-    <div id="gradient">
     <nav class="navbar" role="navigation" aria-label="main navigation" id="admin">
     <svg viewbox="0 0 100 100" preserveAspectRatio="none" class="svg1">
         <polygon fill="white" points="0,100 135,0 100,100"></polygon> 
@@ -68,6 +66,7 @@ session_start();
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+            <img src="/cogip/public/assets/img/logo.png" alt="logo" style="margin-left: -100px;">
                 <a class="navbar-item" href="/home">Home</a>
 
                 <a class="navbar-item" href="/invoice">Invoices</a>
@@ -123,7 +122,6 @@ session_start();
             </div>
         </div>
     </nav>
-    </div>
     </header>
 
 ' ; } ?>
