@@ -6,9 +6,6 @@ $invoices = new WelcomeList();
 $contacts = new WelcomeList();
 $companies = new WelcomeList();
 
-
-
-
 $invoices->setWelcomeList([
   "*",
   "invoice as i",

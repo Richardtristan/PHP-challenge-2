@@ -20,4 +20,11 @@ $filterLastname = isset($_POST['lastname']) ? filter_var($_POST['lastname'], FIL
 $filterFirstname = isset($_POST['lastname']) ? filter_var($_POST['lastname'], FILTER_SANITIZE_STRING) : null;
 $filterEmail = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) : null;
 
+if ($issetVar)
+{
+  $isemptyLastname;
+  $isemptyFirstname;
+  $isemptyEmail;
+}
+
 require __DIR__.'/../view/adding-pages/contact_new.php';
