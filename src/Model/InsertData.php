@@ -25,10 +25,10 @@ class InsertData
       $this->query = $query;
   }
 
-  public function insertContact($id)
+  public function insertContact($param)
   {
-      $query = $this->db->prepare("SELECT p.lastname, p.firstname, p.email, c.name as company_name FROM people as p INNER JOIN company as c ON p.company_id = c.id WHERE p.id = $id");
-      $query->execute();
-      $this->query = $query;
+    $query = $this->db->prepare("INSERT INTO `people`(`lastname`, `firstname`, `email`, `company_id`) VALUES $param[0], $param[1], $param[2], $param[3]";
+    $query->execute();
+    $this->query = $query;
   }
 }
