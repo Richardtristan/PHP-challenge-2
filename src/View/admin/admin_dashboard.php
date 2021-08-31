@@ -1,26 +1,25 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 
-<div class='table'>
-    <label for="companyInfo">Changing informations</label>
-    <table id='companyInfo'>
+<div>
+    <label for="userInfo">Changing informations</label>
+    <table id='userInfo'>
         <tr>
             <th>Name</th>
-            <td><!--Insert Name--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
-        </tr>
-        <tr>
             <th>Username</th>
-            <td><!--Insert Username--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
-        </tr>
-        <tr>
             <th>Access right</th>
-            <td><!--Insert Access right--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
         </tr>
+        <?php foreach ($clients as $data) {
+            ?>
+            <tr>
+                <td><?php echo $data["name"] ?></td>
+                <td><?php echo $data["VAT_number"] ?></td>
+                <td><?php echo $data["country"] ?></td>
+                <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
+                <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
+            </tr>
+            <?php
+        }
+        ?>
     </table>
 </div>
 
