@@ -1,18 +1,22 @@
 <?php require 'header.php' ?>
 
 <div class='table'>
-    <label for="companyInfo">Changing informations</label>
-    <table id='companyInfo'>
+    <label for="UserInfos">Changing user</label>
+    <table id='UserInfos'>
         <tr>
-            <th>Company</th>
+            <th>username</th>
             <td><!--Insert company--></td>
         </tr>
         <tr>
-            <th>Date</th>
+            <th>email</th>
             <td><!--Insert TVA number--></td>
         </tr>
         <tr>
-            <th>Invoice number</th>
+            <th>password</th>
+            <td><!--Insert invoice number--></td>
+        </tr>
+        <tr>
+            <th>grade</th>
             <td><!--Insert invoice number--></td>
         </tr>
     </table>

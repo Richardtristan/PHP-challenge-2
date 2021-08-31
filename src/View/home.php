@@ -23,6 +23,8 @@ require 'surround/header.php';
                     <td><?php echo $data["number"] ?></td>
                     <td><?php echo $data["date"] ?></td>
                     <td><?php echo $data["name"] ?></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></td>
                 </tr>
                 <?php
             }
@@ -42,6 +44,8 @@ require 'surround/header.php';
                     <td><?php echo $data["firstname"] ?></td>
                     <td><?php echo $data["email"] ?></td>
                     <td><?php echo $data["name"] ?></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></td>
                 </tr>
                 <?php
             }
@@ -61,6 +65,8 @@ require 'surround/header.php';
                     <td><?php echo $data["name"] ?></td>
                     <td><?php echo $data["VAT_number"] ?></td>
                     <td><?php echo $data["type"] ?></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></td>
                 </tr>
                 <?php
             }

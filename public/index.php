@@ -31,9 +31,13 @@ get('/companies_client', "../src/Controller/ClientCompaniesController.php");
 get('/companies_suppliers', "../src/Controller/ProviderCompaniesController.php");
 get('/companies_detail/id/$id', "../src/Controller/CompanyDetailController.php");
 get('/logout', "../src/Controller/LogoutController.php");
-get('/create', "../src/View/create.php");
 get('/home', "../src/Controller/WelcomeListController.php");
 get('/member_dashboard', "../src/Controller/UsersListController.php");
+get('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
+post('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
+
+
+
 
 
 

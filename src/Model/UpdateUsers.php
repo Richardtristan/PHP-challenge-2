@@ -6,12 +6,20 @@ class UpdateUsers
         global $db;
         $this->db = $db;
         $query;
+        $request;
     }
 
-    public function setUpdateUsers($param)
+    public function getUpdateUsers($param)
     {
-        $query = $this->db->prepare("UPDATE users SET id = $param[0], username = $param[1], password = $param[2], email = $param[3], grade= $param[4]");
+        $query = $this->db->prepare("SELECT * FROM users WHERE id = $param");
         $query->execute();
         $this->query = $query;
+        return $this->query;
+    }
+
+    public function setUpdateUsers($params)
+    {
+        $request = $this->db->prepare("UPDATE users SET username = ? , password = ? , email = ? , grade = ? WHERE id = ?");
+        $request->execute($params);
     }
 }
