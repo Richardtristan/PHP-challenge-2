@@ -4,12 +4,18 @@
 
 <label for="companyName">Company name</label>
 <input type="text" name="companyName" id="companyName">
-<label for="tva">Invoice date</label>
-<input type="text" name="tva" id="tva">
-<label for="company">Company</label>
-<select name="company" id="company">
-    <option value="">-- Please choose a company --</option>
-    <!-- Inject company name options -->
+<label for="country">Country</label>
+<input type="text" name="country" id="country">
+<label for="company">VAT number</label>
+<input type="text" name="vat" id="vat">
+<label for="company">Type</label>
+<select name="type" id="type">
+  <?php foreach ($selectTypes as $data) {
+      ?>
+      <option value='<?php echo $data['id']?>'><?php echo $data["name"] ?></option>
+      <?php
+  }
+  ?>
 </select>
 <input type="submit" value="Submit">
 </form>

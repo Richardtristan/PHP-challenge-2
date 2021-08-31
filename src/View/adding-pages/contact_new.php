@@ -2,18 +2,20 @@
 
 <form action="" method='POST'>
 
-<label for="name">Name</label>
+<label for="name">Lastame</label>
 <input type="text" name="name" id="name">
-<label for="firstName">First Name</label>
+<label for="firstName">Firstname</label>
 <input type="text" name="firstname" id="firstName">
-<label for="phone">Phone</label>
-<input type="tel" name="phone" id="phone">
 <label for="email">Email</label>
 <input type="email" name="email" id="email">
 <label for="company">Company</label>
 <select name="company" id="company">
-    <option value="">-- Please choose a company --</option>
-    <!-- Inject company name options -->
+  <?php foreach ($selectCompanies as $data) {
+      ?>
+      <option value='<?php echo $data['id']?>'><?php echo $data["name"] ?></option>
+      <?php
+  }
+  ?>
 </select>
 <input type="submit" value="Submit">
 </form>
