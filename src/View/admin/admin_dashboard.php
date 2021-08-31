@@ -1,27 +1,26 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 
-<div class='table'>
-    <label for="companyInfo">Changing informations</label>
-    <table id='companyInfo'>
-        <tr>
-            <th>Name</th>
-            <td><!--Insert Name--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
-        </tr>
-        <tr>
-            <th>Username</th>
-            <td><!--Insert Username--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
-        </tr>
-        <tr>
-            <th>Access right</th>
-            <td><!--Insert Access right--></td>
-            <td><input type="image" src="delete.png" alt="delete" width="20px"></td>
-            <td><input type="image" src="pen.png" alt="modify" width="20px"></td>
-        </tr>
-    </table>
-</div>
+    <div>
+        <label for="userInfo">Changing informations</label>
+        <table id='userInfo'>
+            <tr>
+                <th>Username</th>
+                <th>email</th>
+                <th>Access right</th>
+            </tr>
+            <?php foreach ($users as $data) {
+                ?>
+
+                    <td><?php echo $data["username"] ?></td>
+                    <td><?php echo $data["email"] ?></td>
+                    <td><?php echo $data["grade"] ?></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
+                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </div>
 
 <?php require __DIR__.'/../surround/footer.php' ?>
