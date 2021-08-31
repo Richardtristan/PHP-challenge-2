@@ -1,27 +1,17 @@
 <?php
 
-use App\Model\OneList;
+use App\Model\CompanyDetails;
 
-$company = new OneList();
-$linkedData = new OneList();
+$company = new CompanyDetails();
+$contacts = new CompanyDetails();
+$invoices = new CompanyDetails();
 
-$company->setOneList([
-    "c.name, VAT_number, t.name as type",
-    "company as c",
-    "type as t",
-    "c.type_id = t.id",
-    "c.id = $id"
-]);
 
-$linkedData->setOneList([
-    "i.number, i.date, p.lastname , p.firstname, p.email",
-    "invoice as i",
-    "people as p",
-    "i.people_id = p.id",
-    "i.company_id = $id"
-]);
-
-$company = $company->getOneList()->fetch();
-$linkedData = $linkedData->getOneList()->fetchAll();
+$company->setCompany($id);
+$company = $company->getData()->fetch();
+$contacts->setLinkedContacts($id);
+$contacts = $contacts->getData()->fetchAll();
+$invoices->setLinkedInvoices($id);
+$invoices = $invoices->getData()->fetchAll();
 
 require __DIR__.'/../view/Details/company_details.php';

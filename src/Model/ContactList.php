@@ -2,7 +2,8 @@
 
 namespace App\Model;
 
-class AllList{
+class ContactList
+{
 
     public function __construct()
     {
@@ -11,9 +12,9 @@ class AllList{
         $query;
     }
 
-    public function setAllList($param)
+    public function setAllList()
     {
-        $query = $this->db->prepare("SELECT $param[0] FROM $param[1] INNER JOIN $param[2] ON $param[3] ORDER BY $param[4] ASC");
+        $query = $this->db->prepare("SELECT * FROM people as p INNER JOIN company as c ON p.company_id = c.id ORDER BY p.id ASC");
         $query->execute();
         $this->query = $query;
     }

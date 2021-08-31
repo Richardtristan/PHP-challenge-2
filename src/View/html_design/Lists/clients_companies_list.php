@@ -7,7 +7,7 @@
             <th>VAT</th>
             <th>Country</th>
         </tr>
-        <?php foreach ($companie as $data) {
+        <?php foreach ($company as $data) {
             ?>
             <tr>
                 <td><a href="/companies_detail/id/<?php echo $data['id_company']?>"><?php echo $data["name"] ?></a></td>
