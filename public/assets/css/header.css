@@ -101,7 +101,7 @@ svg {
 
 @media screen and (max-width: 700px) {
   .svg1, img {
-    display: hide !important;
+    display: none !important;
   }
 }
 /*# sourceMappingURL=header.css.map */
