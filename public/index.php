@@ -37,9 +37,13 @@ get('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
 get('/update_contact/id/$id', "../src/Controller/UpdateContactController.php");
 get('/delete_user/id/$id', "../src/Controller/DeleteUserController.php");
 get('/delete_invoice/id/$id', "../src/Controller/DeleteInvoiceController.php");
+get('/delete_people/id/$id', "../src/Controller/DeleteContactController.php");
+get('/delete_company/id/$id', "../src/Controller/DeleteCompanyController.php");
 
 
 
+post('/delete_company/id/$id', "../src/Controller/DeleteCompanyController.php");
+post('/delete_people/id/$id', "../src/Controller/DeleteContactController.php");
 post('/delete_invoice/id/$id', "../src/Controller/DeleteInvoiceController.php");
 post('/delete_user/id/$id', "../src/Controller/DeleteUserController.php");
 post('/update_contact/id/$id', "../src/Controller/UpdateContactController.php");

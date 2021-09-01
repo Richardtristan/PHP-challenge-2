@@ -44,8 +44,8 @@ require 'surround/header.php';
                     <td><?php echo $data["firstname"] ?></td>
                     <td><?php echo $data["email"] ?></td>
                     <td><?php echo $data["name"] ?></td>
-                    <td><a href="/delete_people/id/<?php echo $data['id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
-                    <td><a href="/update_people/id/<?php echo $data['id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
+                    <td><a href="/delete_people/id/<?php echo $data['people_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
+                    <td><a href="/update_people/id/<?php echo $data['people_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
                 </tr>
                 <?php
             }
@@ -65,8 +65,8 @@ require 'surround/header.php';
                     <td><?php echo $data["name"] ?></td>
                     <td><?php echo $data["VAT_number"] ?></td>
                     <td><?php echo $data["type"] ?></td>
-                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
-                    <td><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></td>
+                    <td><a href="/delete_company/id/<?php echo $data['company_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
+                    <td><a href="/delete_company/id/<?php echo $data['company_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
                 </tr>
                 <?php
             }
