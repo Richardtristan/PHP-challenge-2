@@ -23,12 +23,16 @@ require 'surround/header.php';
                     <td><?php echo $data["number"] ?></td>
                     <td><?php echo $data["date"] ?></td>
                     <td><?php echo $data["name"] ?></td>
-                    <td><a href="/delete_invoice/id/<?php echo $data['invoice_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
-                    <td><a href="/update_invoice/id/<?php echo $data['invoice_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
-                </tr>
-                <?php
-            }
+                <?php if ($_SESSION['grade'] === 'Admin'){ echo"
+                    <td><a href='/delete_invoice/id/{$data['invoice_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
+                    <td><a href='/update_invoice/id/{$data['invoice_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
+                }
             ?>
+                    </tr>
+                <?php
+                }
+                ?>
+
         </table>
         <label for="contact">Last Contact :</label>
         <table id='contact'>
@@ -43,13 +47,16 @@ require 'surround/header.php';
                 <tr>
                     <td><?php echo $data["firstname"] ?></td>
                     <td><?php echo $data["email"] ?></td>
-                    <td><?php echo $data["name"] ?></td>
-                    <td><a href="/delete_people/id/<?php echo $data['people_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
-                    <td><a href="/update_people/id/<?php echo $data['people_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
-                </tr>
-                <?php
-            }
-            ?>
+                    <td><?php echo $data["company_name"] ?></td>
+                <?php if ($_SESSION['grade'] === 'Admin'){ echo"
+                    <td><a href='/delete_people/id/{$data['people_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
+                    <td><a href='/update_people/id/{$data['people_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
+                    }
+                    ?>
+                    </tr>
+                    <?php
+                }
+                ?>
         </table>
         <label for="companies">Last Companies :</label>
         <table id='companies'>
@@ -65,12 +72,15 @@ require 'surround/header.php';
                     <td><?php echo $data["name"] ?></td>
                     <td><?php echo $data["VAT_number"] ?></td>
                     <td><?php echo $data["type"] ?></td>
-                    <td><a href="/delete_company/id/<?php echo $data['company_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></td>
-                    <td><a href="/delete_company/id/<?php echo $data['company_id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
-                </tr>
-                <?php
-            }
-            ?>
+                <?php if ($_SESSION['grade'] === 'Admin'){ echo"
+                    <td><a href='/delete_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
+                    <td><a href='/delete_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
+                    }
+                    ?>
+                    </tr>
+                    <?php
+                }
+                ?>
         </table>
     </div>
 
