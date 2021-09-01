@@ -1,4 +1,5 @@
-<?php require __DIR__.'/../surround/header.php' ?>
+<?php require __DIR__.'/../surround/header.php';
+?>
 
     <div>
     <table id='contact_list'>

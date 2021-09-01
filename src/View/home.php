@@ -92,7 +92,7 @@ require 'surround/header.php';
                     <?php if ($_SESSION['grade'] === 'Admin') {
                         echo "
                     <td><a href='/delete_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
-                    <td><a href='/delete_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
+                    <td><a href='/update_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
                     }
                     ?>
                 </tr>

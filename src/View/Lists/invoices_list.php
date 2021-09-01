@@ -10,7 +10,7 @@
         <?php foreach ($invoices as $invoice) {
         ?>
         <tr>
-            <td><a href="/invoice_details/id/<?php echo $invoice['id']?>"><?php echo $invoice["number"] ?></a></td>                
+            <td><a href="/invoice_details/id/<?php echo $invoice['invoice_id']?>"><?php echo $invoice["number"] ?></a></td>
             <td><?php echo $invoice["date"] ?></td>
             <td><?php echo $invoice["name"] ?></td>
             <td><?php echo $invoice["type"] ?></td>
