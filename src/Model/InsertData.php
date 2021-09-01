@@ -23,15 +23,10 @@ class InsertData
       $query->execute();
   }
 
-  public function insertContact($data)
+  public function insertContact()
   {
-    $sql = "INSERT INTO `people`(`firstname`, `lastname`, `email`, `company_id`) VALUES (`:firstname`, `:lastname`, `:email`, `:company_id`)";
-    $query = $this->db->prepare($sql);
-    $query->execute([
-      ':firstname' => $data[0],
-      ':lastname' => $data[1],
-      ':email' => $data[2],
-      ':company_id' => $data[3]
-    ]);
+    //$query = $this->db->prepare("INSERT INTO people (firstname, lastname, email, company_id) VALUES '$data[0]', '$data[1]', '$data[2]', '$data[3]')");
+    $query = $this->db->prepare("INSERT INTO `people`(`firstname`, `lastname`, `email`, `company_id`) VALUES ('[value-2]','[value-3]','[value-4]','[value-5]')");
+    $query->execute();
   }
 }

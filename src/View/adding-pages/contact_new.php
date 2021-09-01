@@ -25,7 +25,7 @@
       <option value="" selected disabled>Select the company...</option>
       <?php foreach ($companies as $data) {
           ?>
-          <option value='<?php echo $data['id_company']?>'><?php echo $data["name"] ?></option>
+          <option value=<?php echo $data['id_company']?>><?php echo $data["name"] ?></option>
           <?php
       }
       ?>
