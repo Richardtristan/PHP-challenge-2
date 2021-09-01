@@ -22,7 +22,10 @@ if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
         $_SESSION['password'] = $login->password($_SESSION['idUser']);
         $_SESSION['email'] = $login->email($_SESSION['idUser']);
         $_SESSION['grade'] = $login->grade($_SESSION['idUser']);
-        $grade = $_SESSION['grade'] = 1 ? 'Modo' : 'Admin';
+        if ($_SESSION['grade'] == 0){
+            $_SESSION['grade'] = 'Modo';
+        }
+        else{$_SESSION['grade'] = 'Admin';}
         require __DIR__.'/WelcomeListController.php';
     } else {
         echo '<p>password or username is not valid</p>';
