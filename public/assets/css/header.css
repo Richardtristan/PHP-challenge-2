@@ -99,9 +99,7 @@ svg {
           box-sizing: inherit;
 }
 
-@media screen and (max-width: 700px) {
-  .svg1, img {
-    display: none !important;
-  }
+.footer {
+  background-image: url("/public/assets/img/footer.svg");
 }
 /*# sourceMappingURL=header.css.map */

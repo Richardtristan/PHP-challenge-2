@@ -93,8 +93,7 @@ svg {
 
     box-sizing: inherit;
 }
-@media screen and (max-width:700px) {
-  .svg1, img {
-    display: hide !important; 
-  }
+
+.footer {
+  background-image: url('/public/assets/img/footer.svg');
 }
