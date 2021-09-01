@@ -15,20 +15,23 @@ class InsertData
   {
       $query = $this->db->prepare("INSERT INTO `invoice`(`number`, `date`, `people_id`, `company_id`) VALUES ($param[0],$param[1],$param[2],$param[3])");
       $query->execute();
-      $this->query = $query;
   }
 
   public function insertCompany($id)
   {
       $query = $this->db->prepare("SELECT p.lastname, p.firstname, p.email, c.name as company_name FROM people as p INNER JOIN company as c ON p.company_id = c.id WHERE p.id = $id");
       $query->execute();
-      $this->query = $query;
   }
 
-  public function insertContact($param)
+  public function insertContact($data)
   {
-    $query = $this->db->prepare("INSERT INTO `people`(`lastname`, `firstname`, `email`, `company_id`) VALUES $param[0], $param[1], $param[2], $param[3]";
-    $query->execute();
-    $this->query = $query;
+    $sql = "INSERT INTO `people`(`firstname`, `lastname`, `email`, `company_id`) VALUES (`:firstname`, `:lastname`, `:email`, `:company_id`)";
+    $query = $this->db->prepare($sql);
+    $query->execute([
+      ':firstname' => $data[0],
+      ':lastname' => $data[1],
+      ':email' => $data[2],
+      ':company_id' => $data[3]
+    ]);
   }
 }

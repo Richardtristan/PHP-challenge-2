@@ -12,19 +12,47 @@ $companies->setAllList();
 
 $companies = $companies->getAllList()->fetchAll();
 
-$isemptyLastname = empty($_POST['lastname']);
-$isemptyFirstname = empty($_POST['firstname']);
-$isemptyEmail = empty($_POST['email']);
-$issetVar = isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['email']);
-$filterLastname = isset($_POST['lastname']) ? filter_var($_POST['lastname'], FILTER_SANITIZE_STRING) : null;
-$filterFirstname = isset($_POST['lastname']) ? filter_var($_POST['lastname'], FILTER_SANITIZE_STRING) : null;
-$filterEmail = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) : null;
+//Sanitizing Part
+$issetVar = isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['company']);
+
+function insert(){
+  $newContact = new InsertData();
+  $newContact->insertContact($_POST["firstname"], $_POST["lastname"], $_POST["email"], $_POST["company"]);
+  echo "done";
+  var_dump($newContact);
+}
 
 if ($issetVar)
 {
-  $isemptyLastname;
-  $isemptyFirstname;
-  $isemptyEmail;
+  $inputs = [
+    "lastname" => $_POST['lastname'],
+    "firstname" => $_POST['firstname'],
+    "email" => $_POST['email']
+  ];
+  foreach ($inputs as $key => $value)
+  {
+    if(empty($value))
+    {
+      $error[$key] = $key . "\nis required.";
+    }
+    else
+    {
+      if ($key === "email")
+      {
+        $email = filter_var($value, FILTER_SANITIZE_EMAIL);
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false)
+        {
+          $error[$key] = $key . "\nis invalid.";
+        }
+      }
+      else
+      {
+        filter_var($value, FILTER_SANITIZE_STRING);
+      }
+    }
+  }
+  var_dump($_POST);
+  if(empty($error)) insert();
 }
 
 require __DIR__.'/../view/adding-pages/contact_new.php';
