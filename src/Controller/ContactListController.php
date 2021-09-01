@@ -11,7 +11,3 @@ $contacts->setAllList();
 
 $contacts = $contacts->getAllList()->fetchAll();
 require __DIR__.'/../view/Lists/contact_list.php';
-
-//$_SESSION['contact_all'] = $contacts->getAllList()->fetchAll();
-
-//header('location: /contact_list');
