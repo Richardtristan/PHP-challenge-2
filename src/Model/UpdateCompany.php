@@ -18,7 +18,7 @@ class UpdateCompany
 
     public function setUpdateCompany($param)
     {
-        $query = $this->db->prepare("UPDATE company SET name = ?, country = ?, VAT_number = ?, type_id=?");
+        $query = $this->db->prepare("UPDATE company SET name = ?, country = ?, VAT_number = ?, type_id = ? WHERE id = ?");
         $query->execute($param);
         $this->query = $query;
     }

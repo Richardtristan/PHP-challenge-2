@@ -17,7 +17,7 @@ class UpdateInvoice
     }
     public function setUpdateInvoice($param)
     {
-        $query = $this->db->prepare("UPDATE invoice SET number = ?, date = ?, people_id = ?, company_id= ?");
+        $query = $this->db->prepare("UPDATE invoice SET date = ?, people_id = ?, company_id = ? WHERE id = ?");
         $query->execute($param);
         $this->query = $query;
     }
