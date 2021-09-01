@@ -43,6 +43,7 @@ post('/login', "../src/Controller/LoginController.php");
 post('/create', "../src/View/create.php");
 post('/new_contact', "../src/Controller/InsertContactController.php");
 post('/new_invoice', "../src/Controller/InsertInvoiceController.php");
+post('/new_companies', "../src/Controller/InsertCompanyController.php");
 
 
 
