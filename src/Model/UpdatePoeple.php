@@ -19,7 +19,7 @@ class UpdatePoeple
     }
     public function setUpdatePoeple($param)
     {
-        $query = $this->db->prepare("UPDATE people SET firstname = ?, lastname = ?, email = ?, company_id= ?");
+        $query = $this->db->prepare("UPDATE people SET firstname = ?, lastname = ?, email = ?, company_id= ? WHERE id = ?");
         $query->execute($param);
         $this->query = $query;
     }

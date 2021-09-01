@@ -9,7 +9,7 @@ $issetVar = isset($_POST['update_user']) && isset($_POST['update_email']) && iss
 $filterUsername = isset($_POST['update_user']) ? trim(filter_var($_POST['update_user'], FILTER_SANITIZE_STRING)) : null;
 $filterEmail = isset($_POST['update_email']) ? trim(filter_var($_POST['update_email'], FILTER_VALIDATE_EMAIL)) : null;
 $filterPassword = isset($_POST['update_pass']) ? filter_var($_POST['update_pass'], FILTER_SANITIZE_STRING) : null;
-$filterGrade = isset($_POST['update_grade']) ? trim(filter_var($_POST['update_grade'], FILTER_SANITIZE_STRING)) : null;
+$filterGrade = isset($_POST['update_grade']) ? trim(filter_var($_POST['update_grade'], FILTER_VALIDATE_INT)) : null;
 
 $users = new UpdateUsers();
 $user = new UpdateUsers();

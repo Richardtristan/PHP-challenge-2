@@ -1,27 +1,7 @@
-<?php require 'header.php' ?>
+<?php  require __DIR__.'/../surround/header.php' ?>
 
-<div class='table'>
-    <label for="companyInfo">Changing informations</label>
-    <table id='companyInfo'>
-        <tr>
-            <th>Company</th>
-            <td><!--Insert company--></td>
-        </tr>
-        <tr>
-            <th>TVA</th>
-            <td><!--Insert TVA number--></td>
-        </tr>
-        <tr>
-            <th>Type</th>
-            <td><!--Insert company type--></td>
-        </tr>
-        <tr>
-            <th>Country</th>
-            <td><!--Insert country--></td>
-        </tr>
-    </table>
-</div>
-<div class='form'>
+
+    <div class='form'>
     <form action="" method="post">
         <label for="name">Modify name of the company</label>
         <input type="text" name="name" id="name">
@@ -34,4 +14,4 @@
     </form>
 </div>
 
-<?php require 'footer.php' ?>
+<?php  require __DIR__.'/../surround/footer.php' ?>

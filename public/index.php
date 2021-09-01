@@ -34,6 +34,9 @@ get('/logout', "../src/Controller/LogoutController.php");
 get('/home', "../src/Controller/WelcomeListController.php");
 get('/member_dashboard', "../src/Controller/UsersListController.php");
 get('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
+get('/update_contact/id/$id', "../src/Controller/UpdateContactController.php");
+post('/update_contact/id/$id', "../src/Controller/UpdateContactController.php");
+
 post('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
 
 
