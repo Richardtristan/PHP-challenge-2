@@ -18,14 +18,23 @@ $users = $users->getUpdateUsers($id)->fetch();
 
 
 if (!$isemptyUsername && !$isemptyEmail && !$isemptyPassword &&  $issetVar){
-    $passOk = password_hash($_POST['update_pass'], PASSWORD_BCRYPT);
-    $user->setUpdateUsers([
-    $filterUsername,
-    $passOk,
-    $filterEmail,
-    $filterGrade,
-        $id
-]);
+    if ($user->UpdateEmailExist($_POST['update_email'])){
+        echo '<script> alert("cette mail exist")</script>';
+
+    if ($user->UpdateUserExist($_POST['update_user'])){
+        echo '<script> alert("cette user exist")</script>';
+    }
+    }
+    if (!$user->UpdateUserExist($_POST['update_user']) && !$user->UpdateEmailExist($_POST['update_email'])) {
+        $passOk = password_hash($_POST['update_pass'], PASSWORD_BCRYPT);
+        $user->setUpdateUsers([
+            $filterUsername,
+            $passOk,
+            $filterEmail,
+            $filterGrade,
+            $id
+        ]);
+    }
 }
 
 

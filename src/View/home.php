@@ -15,6 +15,11 @@ require 'surround/header.php';
                 <th>Invoice number</th>
                 <th>Dates</th>
                 <th>Company</th>
+                <?php if ($_SESSION['grade'] === 'Admin') {
+                    echo "
+                <th>Delete</th>
+                <th>Update</th>";
+                } ?>
             </tr>
             <?php
             foreach ($invoice as $data) {
@@ -23,15 +28,16 @@ require 'surround/header.php';
                     <td><?php echo $data["number"] ?></td>
                     <td><?php echo $data["date"] ?></td>
                     <td><?php echo $data["name"] ?></td>
-                <?php if ($_SESSION['grade'] === 'Admin'){ echo"
+                    <?php if ($_SESSION['grade'] === 'Admin') {
+                        echo "
                     <td><a href='/delete_invoice/id/{$data['invoice_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
                     <td><a href='/update_invoice/id/{$data['invoice_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
-                }
-            ?>
-                    </tr>
+                    }
+                    ?>
+                </tr>
                 <?php
-                }
-                ?>
+            }
+            ?>
 
         </table>
         <label for="contact">Last Contact :</label>
@@ -40,6 +46,11 @@ require 'surround/header.php';
                 <th>Name</th>
                 <th>E-mail</th>
                 <th>Company</th>
+                <?php if ($_SESSION['grade'] === 'Admin') {
+                    echo "
+                <th>Delete</th>
+                <th>Update</th>";
+                } ?>
             </tr>
             <?php
             foreach ($contact as $data) {
@@ -48,15 +59,16 @@ require 'surround/header.php';
                     <td><?php echo $data["firstname"] ?></td>
                     <td><?php echo $data["email"] ?></td>
                     <td><?php echo $data["company_name"] ?></td>
-                <?php if ($_SESSION['grade'] === 'Admin'){ echo"
+                    <?php if ($_SESSION['grade'] === 'Admin') {
+                        echo "
                     <td><a href='/delete_people/id/{$data['people_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
                     <td><a href='/update_people/id/{$data['people_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
                     }
                     ?>
-                    </tr>
-                    <?php
-                }
-                ?>
+                </tr>
+                <?php
+            }
+            ?>
         </table>
         <label for="companies">Last Companies :</label>
         <table id='companies'>
@@ -64,6 +76,11 @@ require 'surround/header.php';
                 <th>Name</th>
                 <th>E-mail</th>
                 <th>Company</th>
+                <?php if ($_SESSION['grade'] === 'Admin') {
+                    echo "
+                <th>Delete</th>
+                <th>Update</th>";
+                } ?>
             </tr>
             <?php
             foreach ($company as $data) {
@@ -72,15 +89,16 @@ require 'surround/header.php';
                     <td><?php echo $data["name"] ?></td>
                     <td><?php echo $data["VAT_number"] ?></td>
                     <td><?php echo $data["type"] ?></td>
-                <?php if ($_SESSION['grade'] === 'Admin'){ echo"
+                    <?php if ($_SESSION['grade'] === 'Admin') {
+                        echo "
                     <td><a href='/delete_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true' alt='delete' width='20px'></td>
                     <td><a href='/delete_company/id/{$data['company_id']}'><input type='image' src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true' alt='modify' width='20px'></a></td>";
                     }
                     ?>
-                    </tr>
-                    <?php
-                }
-                ?>
+                </tr>
+                <?php
+            }
+            ?>
         </table>
     </div>
 

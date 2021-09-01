@@ -22,4 +22,20 @@ class UpdateUsers
         $request = $this->db->prepare("UPDATE users SET username = ? , password = ? , email = ? , grade = ? WHERE id = ?");
         $request->execute($params);
     }
+
+    public function UpdateUserExist($post)
+    {
+        $usernameUpdate = $this->db->prepare("SELECT username FROM users WHERE username = ?");
+        $usernameUpdate->execute([$post]);
+        $userUpdate = $usernameUpdate->fetch();
+        return $userUpdate;
+    }
+
+    public function UpdateEmailExist($post)
+    {
+        $EmailUpdate = $this->db->prepare("SELECT email FROM users WHERE email = ?");
+        $EmailUpdate->execute([$post]);
+        $mailUpdate = $EmailUpdate->fetch();
+        return $mailUpdate;
+    }
 }
