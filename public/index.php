@@ -21,6 +21,7 @@ get('/login', "../src/Controller/LoginController.php");
 get('/invoice', "../src/Controller/InvoicesListController.php");
 get('/new_invoice', "../src/Controller/InsertInvoiceController.php");
 get('/new_contact', "../src/Controller/InsertContactController.php");
+get('/new_invoice', "../src/Controller/InsertInvoiceController.php");
 get('/new_companies', "../src/Controller/InsertCompanyController.php");
 get('/invoice_details/id/$id', "../src/Controller/InvoiceDetailsController.php");
 get('/contact', "../src/Controller/ContactListController.php");
@@ -41,6 +42,7 @@ post('/', "../src/Controller/LoginController.php");
 post('/login', "../src/Controller/LoginController.php");
 post('/create', "../src/View/create.php");
 post('/new_contact', "../src/Controller/InsertContactController.php");
+post('/new_invoice', "../src/Controller/InsertInvoiceController.php");
 
 
 
