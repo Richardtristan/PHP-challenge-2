@@ -17,16 +17,8 @@ $issetVar = isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_P
 
 function insert(){
   $newContact = new InsertData();
-  $newContact->insertContact();
-  echo "done";
+  $newContact->insertContact($_POST['firstname'], $$_POST['lastname'], $_POST['email'], intval($_POST['company']));
 }
-
-$values = [
-  $_POST['firstname'],
-  $_POST['lastname'],
-  $_POST['email'],
-  $_POST['company']
-];
 
 if ($issetVar)
 {

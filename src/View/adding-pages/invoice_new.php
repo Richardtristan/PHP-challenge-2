@@ -1,29 +1,37 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 
 <form action="" method='POST'>
-
-<label for="invoiceNum">Invoice number</label>
-<input type="text" name="invoiceNum" id="invoiceNum">
-<label for="invoiceDate">Invoice date</label>
-<input type="date" name="invoiceDate" id="invoiceDate">
-<label for="company">Company</label>
-<select name="company" id="company">
-  <?php foreach ($selectCompanies as $data) {
+  <div class="">
+    <label for="invoiceDate">Invoice date</label>
+    <input type="date" name="invoiceDate" id="invoiceDate">
+  </div>
+  <div class="">
+    <label for="company">Company</label>
+    <select name="company" id="company">
+    <?php foreach ($selectCompanies as $data)
+    {
       ?>
-      <option value='<?php echo $data['id']?>'><?php echo $data["name"] ?></option>
+      <option value='<?php echo $data['id_company']?>'><?php echo $data["name"] ?></option>
       <?php
-  }
-  ?>
-</select>
-<label for="contact">Contact person regarding the invoice</label>
-<select name="contact" id="contact">
-  <?php foreach ($selectContacts as $data) {
+    }
+    ?>
+    </select>
+  </div>
+  <div class="">
+    <label for="contact">Contact person regarding the invoice</label>
+    <select name="contact" id="contact">
+      <?php foreach ($selectContacts as $data)
+      {
+        ?>
+        <option value='<?php echo $data['id']?>'><?php echo $data["lastname"] . " " . $data["firstname"] ?></option>
+        <?php
+      }
       ?>
-      <option value='<?php echo $data['id']?>'><?php echo $data["lastname"] . " " . $data["firstname"] ?></option>
-      <?php
-  }
-  ?>
-</select>
-<input type="submit" value="Submit">
+    </select>
+  </div>
+  <div class="">
+    <input type="submit" value="Submit">
+  </div>
 </form>
+
 <?php require __DIR__.'/../surround/footer.php' ?>
