@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Model\UpdateUsers;
 
 $isemptyUsername = empty($_POST['update_user']);
@@ -17,16 +18,16 @@ $user = new UpdateUsers();
 $users = $users->getUpdateUsers($id)->fetch();
 
 
-if (!$isemptyUsername && !$isemptyEmail && !$isemptyPassword &&  $issetVar){
+if (!$isemptyUsername && !$isemptyEmail && !$isemptyPassword && $issetVar) {
     $passOk = password_hash($_POST['update_pass'], PASSWORD_BCRYPT);
     $user->setUpdateUsers([
-    $filterUsername,
-    $passOk,
-    $filterEmail,
-    $filterGrade,
+        $filterUsername,
+        $passOk,
+        $filterEmail,
+        $filterGrade,
         $id
-]);
+    ]);
 }
 
 
-require __DIR__.'/../view/modify-pages/modify_user.php';
+require __DIR__ . '/../view/modify-pages/modify_user.php';

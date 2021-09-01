@@ -10,10 +10,17 @@ class UpdatePoeple
         $query;
     }
 
+    public function getUpdatePoeple($param)
+    {
+        $query = $this->db->prepare("SELECT * FROM people WHERE id = $param");
+        $query->execute();
+        $this->query = $query;
+        return $this->query;
+    }
     public function setUpdatePoeple($param)
     {
-        $query = $this->db->prepare("UPDATE people SET id = $param[0], firstname = $param[1], lastname = $param[2], email = $param[3], company_id= $param[4]");
-        $query->execute();
+        $query = $this->db->prepare("UPDATE people SET firstname = ?, lastname = ?, email = ?, company_id= ?");
+        $query->execute($param);
         $this->query = $query;
     }
 }

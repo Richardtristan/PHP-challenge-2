@@ -8,10 +8,17 @@ class UpdateInvoice
         $query;
     }
 
+    public function getUpdateInvoice($param)
+    {
+        $query = $this->db->prepare("SELECT * FROM invoice WHERE id = $param");
+        $query->execute();
+        $this->query = $query;
+        return $this->query;
+    }
     public function setUpdateInvoice($param)
     {
-        $query = $this->db->prepare("UPDATE invoice SET id = $param[1], number = $param[2], date = $param[3], people_id = $param[4], company_id= $param[5]");
-        $query->execute();
+        $query = $this->db->prepare("UPDATE invoice SET number = ?, date = ?, people_id = ?, company_id= ?");
+        $query->execute($param);
         $this->query = $query;
     }
 }

@@ -8,15 +8,19 @@ class UpdateCompany
         $query;
     }
 
+    public function getUpdateCompany($param)
+    {
+        $query = $this->db->prepare("SELECT * FROM company WHERE id = $param");
+        $query->execute();
+        $this->query = $query;
+        return $this->query;
+    }
+
     public function setUpdateCompany($param)
     {
-        $query = $this->db->prepare("UPDATE company SET id = $param[0], name = $param[1], country = $param[2], VAT_number = $param[3], type_id= $param[4]");
-        $query->execute();
+        $query = $this->db->prepare("UPDATE company SET name = ?, country = ?, VAT_number = ?, type_id=?");
+        $query->execute($param);
         $this->query = $query;
     }
 
-    public function getUpdateCompany()
-    {
-        return $this->query;
-    }
 }
