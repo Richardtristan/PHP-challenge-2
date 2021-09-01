@@ -10,7 +10,7 @@ $companies = new WelcomeList();
 
 
 $invoices->setWelcomeList([
-  "*",
+  "i.id as invoice_id, number, date, c.name as name",
   "invoice as i",
   "company as c",
   "i.company_id = c.id",

@@ -8,10 +8,9 @@ class DeleteData
         $query;
     }
 
-    public function DeleteData($param,$id)
+    public function DeleteData($param)
     {
-        $query = $this->db->prepare("DELETE FROM $param[0] WHERE id = ?]");
-        $query->execute($id);
-        $this->query = $query;
+        $query = $this->db->prepare("DELETE FROM $param[0] WHERE id=$param[1]");
+        $query->execute();
     }
 }

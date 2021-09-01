@@ -14,7 +14,7 @@
                     <td><?php echo $data["username"] ?></td>
                     <td><?php echo $data["email"] ?></td>
                     <td><?php echo $data["grade"] ?></td>
-                    <td><a ><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></a></td>
+                    <td><a href="/delete_user/id/<?php echo $data['id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/delete.png?raw=true" alt="delete" width="20px"></a></td>
                     <td><a href="/update_user/id/<?php echo $data['id']?>"><input type="image" src="https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/pen.png?raw=true" alt="modify" width="20px"></a></td>
                 </tr>
                 <?php

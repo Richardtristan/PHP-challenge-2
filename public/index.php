@@ -16,7 +16,7 @@ $db = $connection->getPdo();
 // In the URL -> http://localhost
 // The output -> Index
 
-get('/', "../src/Controller/LoginController.php");
+get('/', "../src/Controller/WelcomeListController.php");
 get('/login', "../src/Controller/LoginController.php");
 get('/invoice', "../src/Controller/InvoicesListController.php");
 get('/new_invoice', "../src/Controller/InsertInvoiceController.php");
@@ -35,15 +35,15 @@ get('/home', "../src/Controller/WelcomeListController.php");
 get('/member_dashboard', "../src/Controller/UsersListController.php");
 get('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
 get('/update_contact/id/$id', "../src/Controller/UpdateContactController.php");
+get('/delete_user/id/$id', "../src/Controller/DeleteUserController.php");
+get('/delete_invoice/id/$id', "../src/Controller/DeleteInvoiceController.php");
+
+
+
+post('/delete_invoice/id/$id', "../src/Controller/DeleteInvoiceController.php");
+post('/delete_user/id/$id', "../src/Controller/DeleteUserController.php");
 post('/update_contact/id/$id', "../src/Controller/UpdateContactController.php");
-
 post('/update_user/id/$id', "../src/Controller/UpdateUsersController.php");
-
-
-
-
-
-
 post('/', "../src/Controller/LoginController.php");
 post('/login', "../src/Controller/LoginController.php");
 post('/create', "../src/View/create.php");
