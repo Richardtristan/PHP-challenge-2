@@ -11,6 +11,11 @@ session_start();
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
     <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/main.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+<<<<<<< HEAD
+=======
+    <link rel='stylesheet' href='<?php dirname(__FILE__)?>../../../../assets/css/header.css'>
+    <link rel="stylesheet" type="text/css" href="<?php dirname(FILE)?>../../../../assets/css/table.css">
+>>>>>>> Eli
     <title>COGIP</title>
 </head>
 

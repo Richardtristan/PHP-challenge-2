@@ -5,7 +5,7 @@ require 'surround/header.php';
 
 ?>
     <h1>Welcome to the COGIP</h1>
-    <p>Bonjour !</p>
+    <p>Hello !</p>
     <div>
         <label for="invoice">Last invoice :</label>
         <table id='invoice'>

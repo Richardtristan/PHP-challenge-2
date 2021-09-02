@@ -2,7 +2,11 @@
 ?>
 
 <footer>
+<<<<<<< HEAD
     <div class="ftr">
+=======
+    <div class="footer">
+>>>>>>> Eli
         <?php if (isset($_SESSION['username'])){?>
         <p class='connexion'>Vous êtes connecté en tant que : <br> <?php echo $_SESSION['username'] ?> </p><?php }?>
         <p class='slogan'>Vive la COGIP ! </p>
