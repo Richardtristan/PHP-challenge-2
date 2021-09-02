@@ -18,6 +18,7 @@ session_start();
     <title>COGIP</title>
 </head>
 
+<body>
 <header>
     <?php if(!isset($_SESSION['username']) && !isset($_SESSION['grade']) || $_SESSION['grade'] == '' ){echo"
     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
@@ -199,4 +200,3 @@ session_start();
     </header>
 
 " ; } ?>
-    <body>
