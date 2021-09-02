@@ -6,9 +6,6 @@ $invoices = new WelcomeList();
 $contacts = new WelcomeList();
 $companies = new WelcomeList();
 
-
-
-
 $invoices->setWelcomeList([
   "i.id as invoice_id, number, date, c.name as name",
   "invoice as i",
