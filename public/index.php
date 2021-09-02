@@ -44,7 +44,6 @@ get('/delete_people/id/$id', "../src/Controller/DeleteContactController.php");
 get('/delete_company/id/$id', "../src/Controller/DeleteCompanyController.php");
 
 
-
 post('/delete_company/id/$id', "../src/Controller/DeleteCompanyController.php");
 post('/delete_people/id/$id', "../src/Controller/DeleteContactController.php");
 post('/delete_invoice/id/$id', "../src/Controller/DeleteInvoiceController.php");
