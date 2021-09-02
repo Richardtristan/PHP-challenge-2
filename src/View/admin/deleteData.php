@@ -1,7 +1,7 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 
 <body>
-<h1>Supprimer?</h1>
+<h1>Delete??</h1>
 <form method="post">
     <p>Choose Yes or No :</p>
     <div>
