@@ -55,7 +55,6 @@ post('/update_company/id/$id', "../src/Controller/UpdateCompanyController.php");
 post('/update_invoice/id/$id', "../src/Controller/UpdateInvoiceController.php");
 post('/', "../src/Controller/LoginController.php");
 post('/login', "../src/Controller/LoginController.php");
-post('/create', "../src/View/create.php");
 post('/new_contact', "../src/Controller/InsertContactController.php");
 post('/new_invoice', "../src/Controller/InsertInvoiceController.php");
 post('/new_companies', "../src/Controller/InsertCompanyController.php");
