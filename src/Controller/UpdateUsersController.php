@@ -18,7 +18,6 @@ $user = new UpdateUsers();
 
 $users = $users->getUpdateUsers($id)->fetch();
 
-
 if (!$isemptyUsername && !$isemptyEmail && !$isemptyPassword &&  $issetVar){
     if ($user->UpdateEmailExist($_POST['update_email'])){
         echo '<script> alert("cette mail exist")</script>';
