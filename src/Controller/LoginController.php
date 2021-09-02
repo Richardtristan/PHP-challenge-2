@@ -1,5 +1,7 @@
 <?php
-
+if (isset($_SESSION['username'])) {
+    header('location: /home');
+}
 session_start();
 use App\Model\Login;
 
