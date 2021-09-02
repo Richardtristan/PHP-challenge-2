@@ -37,3 +37,4 @@ $invoice = $invoices->getWelcomeList()->fetchAll();
 $contact = $contacts->getWelcomeList()->fetchAll();
 $company = $companies->getWelcomeList()->fetchAll();
 require __DIR__.'/../view/home.php';
+
