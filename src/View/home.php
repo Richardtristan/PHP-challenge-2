@@ -36,7 +36,6 @@ require 'surround/header.php';
                 <?php
             }
             ?>
-
         </table>
         <label for="contact">Last Contact :</label>
         <table id='contact'>
