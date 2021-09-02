@@ -1,5 +1,7 @@
 <?php
-
+if (!isset($_SESSION['username'])) {
+    header('location: /login');
+}
 use App\Model\UpdateUsers;
 
 $isemptyUsername = empty($_POST['update_user']);
