@@ -5,7 +5,6 @@ if (!isset($_SESSION['username'])) {
 use App\Model\CompanyList;
 use App\Model\ContactList;
 
-
 $companies = new CompanyList();
 
 $companies->setAllList();
