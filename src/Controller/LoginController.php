@@ -6,8 +6,6 @@ session_start();
 use App\Model\Login;
 
 
-
-
 $isemptyUsername = empty($_POST['Login']);
 $isemptyPassword = empty($_POST['Password']);
 $issetVar = isset($_POST['Login']) && isset($_POST['Password']);
