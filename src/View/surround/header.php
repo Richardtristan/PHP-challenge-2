@@ -10,11 +10,7 @@ session_start();
     <script type='text/javascript' src='<?php dirname(__FILE__)?>../../../../assets/js/main.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
     <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/main.css'>
-    <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/blob.css'>
-    <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/login.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
-    <link rel='stylesheet' href='<?php dirname(__FILE__)?>../../../../assets/css/header.css'>
-    <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/table.css">
     <title>COGIP</title>
 </head>
 

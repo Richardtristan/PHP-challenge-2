@@ -1,0 +1,9 @@
+@import 'surround/footer/footer';
+@import 'surround/header/header';
+@import 'body_pages/table/table';
+//@import 'details/blob/blob';
+@import 'body_pages/login/login';
+
+html, body {
+    height: 100%;
+}
