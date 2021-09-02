@@ -1,14 +1,22 @@
-$font_surround: Georgia, serif;
+$font_surround: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 .navbar {
   height: 20vh;
     background-color: #000000;
     padding: 0px;
     margin: 0px;
     color: black;
-    font-family: $font_surround;
+    font: $font_surround;
+    font-weight: 400;
+    font-size: 23px;
+    :nth-child(2) {
+      padding-left: 70px;
+    }
     .navbar-start {
       margin-left: 100px;
       margin-top: -30px;
+      img {
+        margin-left: -125px;
+      }
     }
     .navbar-end {
       margin-left: -300px;
@@ -19,9 +27,12 @@ $font_surround: Georgia, serif;
         &:hover{
           background-color: transparent;
           margin-bottom: 5px;
+          font-family: $font_surround;
+
         }
         .navbar-item.has-dropdown, .navbar-link{
           color: black;
+          font-family: $font_surround;
           &:hover{
             background-color: transparent;
             margin-bottom: 5px;
@@ -36,6 +47,7 @@ $font_surround: Georgia, serif;
     background-color: transparent;
     color: black;
     border-color: black;
+    font-family: $font_surround;
   }
   
   // #gradient
@@ -61,15 +73,9 @@ svg {
   height: 200px;
 }
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
-
     display: block;
     margin-top: -60px;
-
-}
-.navbar-burger.navbar-item.is-active {
-  img{
-    display: none;
-  }
+    font-family: $font_surround;
 }
 .navbar-dropdown {
 
@@ -85,6 +91,7 @@ svg {
     position: absolute;
     top: 100%;
     z-index: 20;
+    font-family: $font_surround;
 
 }
 .navbar-dropdown {
@@ -92,6 +99,7 @@ svg {
     font-size: .875rem;
     padding-bottom: .5rem;
     padding-top: .5rem;
+    font-family: $font_surround;
 
 }
 *, ::after, ::before {
