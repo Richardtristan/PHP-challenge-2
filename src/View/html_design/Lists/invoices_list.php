@@ -1,5 +1,5 @@
 <?php require __DIR__.'/../surround/header.php'; ?>
-<div>
+<div class='block'>
     <table id='invoice_list'>
         <tr>
             <th>Invoice number</th>

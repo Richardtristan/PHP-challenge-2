@@ -21,16 +21,6 @@ footer p {
   margin-left: 45px;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .block {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -43,6 +33,7 @@ body {
   padding: 0px;
   margin: 0px;
   color: black;
+  font-family: Georgia, serif;
 }
 
 .navbar .navbar-start {
@@ -95,6 +86,10 @@ svg {
   height: 200px;
 }
 
+.svg2 {
+  height: 200px;
+}
+
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
   display: block;
   margin-top: -60px;
@@ -129,17 +124,6 @@ svg {
 *, ::after, ::before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-}
-
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  background-image: url("https://raw.githubusercontent.com/Richardtristan/PHP-challenge-2/main/public/assets/img/cogip-bg.jpg");
-  font-family: sans-serif;
-  font-weight: 100;
 }
 
 .container {
@@ -241,7 +225,20 @@ tbody td:hover:before {
   font-size: 20px;
 }
 
-html, body {
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("https://raw.githubusercontent.com/Richardtristan/PHP-challenge-2/main/public/assets/img/cogip-bg.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

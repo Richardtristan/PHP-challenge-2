@@ -8,20 +8,17 @@ footer {
     flex-shrink: 0;
     margin-left: -10px;
     .slogan {
-      font: 1em sans-serif;
-      margin-top: 50px;
+      font: $font_surround;
+      margin-top: 15px;
     }
       p {
-        font: 2em sans-serif;
-        margin-top: 10px;
+        font: $font_surround;
+        padding: 20px;
+        margin-top: 20px;
         margin-left: 45px;
       }
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  .block {
+  .block, .form {
     flex: 1 0 auto;
   }

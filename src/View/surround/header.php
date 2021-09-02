@@ -11,11 +11,6 @@ session_start();
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
     <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/main.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
-<<<<<<< HEAD
-=======
-    <link rel='stylesheet' href='<?php dirname(__FILE__)?>../../../../assets/css/header.css'>
-    <link rel="stylesheet" type="text/css" href="<?php dirname(FILE)?>../../../../assets/css/table.css">
->>>>>>> Eli
     <title>COGIP</title>
 </head>
 
@@ -51,9 +46,12 @@ session_start();
     </header>
 " ; } ?>
     <?php if($_SESSION['grade'] === 'Admin'){echo"
-    <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
+    <nav class='navbar' role='navigation' aria-label='main navigation' id='admin' clip-path='url(#cut)'>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-        <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+        <defs>
+            <clipPath id='cut'>
+                <polygon fill='white' points='0,100 135,0 100,100'></polygon>
+            </clipPath>
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
         <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->

@@ -1,7 +1,7 @@
 <?php require __DIR__.'/../surround/header.php';
 ?>
 
-    <div>
+<div class='block'>
     <table id='contact_list'>
         <tr>
             <th>Name</th>

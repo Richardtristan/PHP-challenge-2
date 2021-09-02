@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../public/assets/scss/fonts/font_table.scss"
+    ],
+    "names": [],
+    "file": "font_table.min.css"
+}

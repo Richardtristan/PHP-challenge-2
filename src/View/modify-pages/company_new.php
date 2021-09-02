@@ -1,5 +1,6 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 
+<div class='block'>
 <form action="" method='POST'>
   <div class="">
     <label for="companyName">Company name</label>
@@ -31,5 +32,5 @@
     <input type="submit" value="Submit">
   </div>
 </form>
-
+</div>
 <?php require __DIR__.'/../surround/footer.php' ?>

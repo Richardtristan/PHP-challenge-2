@@ -1,6 +1,6 @@
 <?php require __DIR__.'/../surround/header.php'; ?>
 <h1>Contact : <!--Insert contact name--></h1>
-<div>
+<div class='block'>
     <table>
         <tr>
             <th>Contact</th>

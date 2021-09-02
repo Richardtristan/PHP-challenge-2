@@ -1,5 +1,5 @@
 <?php require 'header.php' ?>
-
+<div class='block'>
 <h1>Welcome to the COGIP</h1>
 <h2>Bonjour Jean-Christian !</h2>
 <h3>Que souhaitez-vous faire aujourd'hui ?</h3>
@@ -61,5 +61,5 @@
         </tr>
     </table>
 </div>
-
+</div>
 <?php require 'footer.php' ?>

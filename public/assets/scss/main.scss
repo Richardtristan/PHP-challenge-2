@@ -3,7 +3,16 @@
 @import 'body_pages/table/table';
 //@import 'details/blob/blob';
 @import 'body_pages/login/login';
+@import 'fonts/fontSurround';
+@import 'fonts/fontTable';
 
-html, body {
+html {
     height: 100%;
 }
+body {
+    margin: 0;
+    background-image: url('https://raw.githubusercontent.com/Richardtristan/PHP-challenge-2/main/public/assets/img/cogip-bg.jpg');
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }

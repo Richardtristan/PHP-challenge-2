@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../public/assets/scss/fonts/font_surround.scss"
+    ],
+    "names": [],
+    "file": "font_surround.min.css"
+}

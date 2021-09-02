@@ -1,6 +1,6 @@
 <?php require __DIR__.'/../surround/header.php'; ?>
 <h1>Invoice : <?php echo $invoice["number"] ?></h1>
-<div>
+<div class='block'>
     <label for="invoiceCompany">Company linked to the invoice :</label>
     <table id='invoiceCompany'>
         <tr>
