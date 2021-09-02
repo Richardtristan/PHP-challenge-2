@@ -19,7 +19,6 @@ $types = new TypeList();
 $types->setAllList();
 $types = $types->getAllList()->fetchAll();
 
-
 $company = new UpdateCompany();
 $company = $company->getUpdateCompany($id)->fetch();
 
