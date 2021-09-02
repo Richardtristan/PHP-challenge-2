@@ -8,4 +8,5 @@
         <p class='slogan'>Vive la COGIP ! </p>
     </div>
 </footer>
+</body>
 </html>
