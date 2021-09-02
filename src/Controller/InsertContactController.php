@@ -7,7 +7,6 @@ use App\Model\InsertData;
 use App\Model\CompanyList;
 use App\Model\ContactList;
 
-
 $companies = new CompanyList();
 
 $companies->setAllList();
