@@ -4,13 +4,27 @@
 //@import 'details/blob/blob';
 @import 'body_pages/login/login';
 
-html {
-    height: 100%;
+* {
+    box-sizing: border-box;
 }
-body {
-    margin: 0;
-    background-image: url('https://raw.githubusercontent.com/Richardtristan/PHP-challenge-2/main/public/assets/img/cogip-bg.jpg');
-    display: flex;
-    flex-direction: column;
+html {
+    background: url('https://raw.githubusercontent.com/Richardtristan/PHP-challenge-2/main/public/assets/img/cogip-bg.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100%;
+    overflow: hidden;
+}
+ body {
+//     background-image: url('https://raw.githubusercontent.com/Richardtristan/PHP-challenge-2/main/public/assets/img/cogip-bg.jpg');
+//     background-size: cover;
+     display: flex;
+     flex-direction: column;
+    height: 100vh;
+}
+
+.block, .form {
+    flex: 1 0 auto;
   }
+  

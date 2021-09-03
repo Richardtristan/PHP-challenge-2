@@ -18,10 +18,14 @@ session_start();
     <?php if(!isset($_SESSION['username']) && !isset($_SESSION['grade']) || $_SESSION['grade'] == '' ){echo"
     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
+    <defs>
+    <clipPath id='clip'>
         <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+    </clipPath>
+    </defs>
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
-        <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->
+        <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
     </svg>
         <div class='navbar-brand'>
             <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
@@ -46,27 +50,24 @@ session_start();
     </header>
 " ; } ?>
     <?php if($_SESSION['grade'] === 'Admin'){echo"
-    <nav class='navbar' role='navigation' aria-label='main navigation' id='admin' clip-path='url(#cut)'>
-    <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-        <defs>
-            <clipPath id='cut'>
-                <polygon fill='white' points='0,100 135,0 100,100'></polygon>
-            </clipPath>
-    </svg>
-    <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
-        <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->
-    </svg>
-        <div class='navbar-brand'>
-            <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
-                <span aria-hidden='true'></span>
-                <span aria-hidden='true'></span>
-                <span aria-hidden='true'></span>
-            </a>
-        </div>
-        <div id='navbarBasicExample' class='navbar-menu'>
-            <div class='navbar-start'>
-            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' style='margin-left: -100px;'>
-                <a class='navbar-item' href='/home'>Home</a>
+     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
+     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
+         <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+     </svg>
+     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
+         <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
+     </svg>
+         <div class='navbar-brand'>
+             <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
+                 <span aria-hidden='true'></span>
+                 <span aria-hidden='true'></span>
+                 <span aria-hidden='true'></span>
+             </a>
+         </div>
+         <div id='navbarBasicExample' class='navbar-menu'>
+             <div class='navbar-start'>
+             <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo'>
+                 <a class='navbar-item' href='/login'>Home</a>
 
                 <a class='navbar-item' href='/invoice'>Invoices</a>
 
@@ -131,7 +132,7 @@ session_start();
         <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
-        <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->
+        <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
     </svg>
         <div class='navbar-brand'>
             <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
@@ -142,9 +143,10 @@ session_start();
         </div>
         <div id='navbarBasicExample' class='navbar-menu'>
             <div class='navbar-start'>
-            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' style='margin-left: -100px;'>
-                <a class='navbar-item' href='/home'>Home</a>
+            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo'>
 
+                <a class='navbar-item' href='/login'>Home</a>
+                
                 <a class='navbar-item' href='/invoice'>Invoices</a>
 
                 <a class='navbar-item' href='/contact'>Contacts</a>

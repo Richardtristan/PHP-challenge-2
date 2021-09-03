@@ -1,4 +1,9 @@
 $font_surround: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
 .navbar {
   height: 20vh;
     background-color: #000000;
@@ -7,20 +12,23 @@ $font_surround: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida S
     color: black;
     font: $font_surround;
     font-weight: 400;
-    font-size: 23px;
-    :nth-child(2) {
-      padding-left: 70px;
-    }
+    font-size: 18px;
+
     .navbar-start {
       margin-left: 100px;
-      margin-top: -30px;
+      margin-top: -100px;
+      font-weight: 400;
+      font-size: 18px;
       img {
-        margin-left: -125px;
+        margin-top: 50px;
+        margin-left: -120px;
+        width: 30vw;
+        height: 25vh;
       }
     }
     .navbar-end {
-      margin-left: -300px;
-      margin-top: -30px;
+      margin-left: -1100px;
+      margin-top: -100px;
     }
     .navbar-item, .navbar-link {
         color: black; 
@@ -28,26 +36,14 @@ $font_surround: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida S
           background-color: transparent;
           margin-bottom: 5px;
           font-family: $font_surround;
-
-        }
-        .navbar-item.has-dropdown, .navbar-link{
+          font-weight: 400;
+          font-size: 18px;
           color: black;
-          font-family: $font_surround;
-          &:hover{
-            background-color: transparent;
-            margin-bottom: 5px;
-          }
         }
     }
     p {
       text-align: center;
   }
-  }
-  .button {
-    background-color: transparent;
-    color: black;
-    border-color: black;
-    font-family: $font_surround;
   }
   
   // #gradient
@@ -64,7 +60,6 @@ svg {
   width: 100%;
   height: 10vw;
   /* set height to pixels if you want angle to change with screen width */
-  
 }
 .svg2 {
   height: 200px;
@@ -74,35 +69,19 @@ svg {
 }
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
     display: block;
-    margin-top: -60px;
+    margin-top: -120px;
     font-family: $font_surround;
+    font-weight: 400;
+    font-size: 15px;
 }
+
+.navbar-item.has-dropdown.is-active .navbar-link,
+.navbar-item.has-dropdown:focus .navbar-link,
+.navbar-item.has-dropdown:hover .navbar-link
+{
+      background-color: transparent !important;
+    }
+
 .navbar-dropdown {
-
-    background-color: #fff;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-top: 2px solid #dbdbdb;
-    box-shadow: 0 8px 8px rgba(10,10,10,.1);
-    display: none;
-    font-size: .875rem;
-    left: 0;
-    min-width: 100%;
-    position: absolute;
-    top: 100%;
-    z-index: 20;
-    font-family: $font_surround;
-
-}
-.navbar-dropdown {
-
-    font-size: .875rem;
-    padding-bottom: .5rem;
-    padding-top: .5rem;
-    font-family: $font_surround;
-
-}
-*, ::after, ::before {
-
-    box-sizing: inherit;
+  background-color: #ffffffc4 !important;
 }
