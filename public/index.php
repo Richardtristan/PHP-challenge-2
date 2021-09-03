@@ -44,7 +44,6 @@ get('/delete_people/id/$id', "../src/Controller/DeleteContactController.php");
 get('/delete_company/id/$id', "../src/Controller/DeleteCompanyController.php");
 
 
-
 post('/delete_company/id/$id', "../src/Controller/DeleteCompanyController.php");
 post('/delete_people/id/$id', "../src/Controller/DeleteContactController.php");
 post('/delete_invoice/id/$id', "../src/Controller/DeleteInvoiceController.php");
@@ -55,7 +54,6 @@ post('/update_company/id/$id', "../src/Controller/UpdateCompanyController.php");
 post('/update_invoice/id/$id', "../src/Controller/UpdateInvoiceController.php");
 post('/', "../src/Controller/LoginController.php");
 post('/login', "../src/Controller/LoginController.php");
-post('/create', "../src/View/create.php");
 post('/new_contact', "../src/Controller/InsertContactController.php");
 post('/new_invoice', "../src/Controller/InsertInvoiceController.php");
 post('/new_companies', "../src/Controller/InsertCompanyController.php");

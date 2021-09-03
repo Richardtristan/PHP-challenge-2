@@ -7,7 +7,6 @@ use App\Model\CompanyList;
 use App\Model\ContactList;
 use App\Model\TypeList;
 
-
 $newCompany = new InsertData();
 $selectTypes = new TypeList();
 

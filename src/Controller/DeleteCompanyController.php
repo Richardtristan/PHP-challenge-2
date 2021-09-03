@@ -7,7 +7,6 @@ use App\Model\DeleteData;
 $user = new DeleteData();
 
 
-
 $issetNon = isset($_POST['non']);
 $issetOui = isset($_POST['oui']);
 

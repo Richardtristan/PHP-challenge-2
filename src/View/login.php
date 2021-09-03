@@ -9,7 +9,6 @@ require 'surround/header.php';
         <div class="block">
             <h1 class='title'>Welcome to the COGIP</h1>
 
-
             <h2 class='welcome'>Bienvenue dans l'espace de connexion de la COGIP :</h2>
             <div class="all">
                 <!-- <div class="tk-blob" style="--time: 20s; --amount: 5; --fill: #b2d6d0;">

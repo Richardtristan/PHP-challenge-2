@@ -7,7 +7,6 @@ use App\Model\CompanyList;
 use App\Model\ContactList;
 use App\Model\UpdateInvoice;
 
-
 $isemptyCompany = empty($_POST['company']);
 $isemptyContact = empty($_POST['contact']);
 $isemptyDate = empty($_POST['date']);

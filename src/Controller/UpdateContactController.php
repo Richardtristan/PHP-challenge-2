@@ -6,7 +6,6 @@ if (!isset($_SESSION['username'])) {
 use App\Model\CompanyList;
 use App\Model\UpdatePoeple;
 
-
 $isemptyContactFirstname = empty($_POST['Update_contact_firstname']);
 $isemptyContactLastname = empty($_POST['Update_contact_lastname']);
 $isemptyIdCompany = empty($_POST['update_company_id']);

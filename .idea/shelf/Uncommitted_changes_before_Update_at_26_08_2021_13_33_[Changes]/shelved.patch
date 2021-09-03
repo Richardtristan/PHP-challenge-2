@@ -1,0 +1,636 @@
+Index: public/index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nrequire '../vendor/autoload.php';\r\nrequire_once(\"router.php\");\r\nuse App\\Model\\Connect;\r\n$connection = new Connect('127.0.0.1', 'cogip', 'root', '');\r\n$db = $connection->getPdo();\r\n\r\n// ##################################################\r\n// ##################################################\r\n// ##################################################\r\n\r\n// Static GET\r\n// In the URL -> http://localhost\r\n// The output -> Index\r\n\r\nget('/', \"../src/Controller/LoginController.php\");\r\nget('/login', \"../src/Controller/LoginController.php\");\r\nget('/connect', \"../src/View/php/login.php\");\r\npost('/connect','../src/Controller/LoginController.php');\r\nget('/welcome', \"../src/View/php/welcome.php\");\r\n\r\nget('/connected', \"../src/Controller/LoginController.php\");\r\nget('/logout', \"../src/Controller/LogoutController.php\");\r\nget('/create', \"../src/View/php/create.php\");\r\npost('/create', \"../src/View/php/create.php\");\r\npost('/connected', \"../src/View/php/LoginController.php\");\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// ##################################################\r\n// ##################################################\r\n// ##################################################\r\n// any can be used for GETs or POSTs\r\n\r\n// For GET or POST\r\n// The 404.php which is inside the views folder will be called\r\n// The 404.php has access to $_GET and $_POST\r\nany('/404','src/View/php/404.php');\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/index.php b/public/index.php
+--- a/public/index.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ b/public/index.php	(date 1629974218158)
+@@ -2,9 +2,12 @@
+ require '../vendor/autoload.php';
+ require_once("router.php");
+ use App\Model\Connect;
++use App\Model\WelcomeList;
++
+ $connection = new Connect('127.0.0.1', 'cogip', 'root', '');
+ $db = $connection->getPdo();
+ 
++
+ // ##################################################
+ // ##################################################
+ // ##################################################
+@@ -15,15 +18,16 @@
+ 
+ get('/', "../src/Controller/LoginController.php");
+ get('/login', "../src/Controller/LoginController.php");
+-get('/connect', "../src/View/php/login.php");
++get('/connect', "../src/View/login.php");
+ post('/connect','../src/Controller/LoginController.php');
+-get('/welcome', "../src/View/php/welcome.php");
++get('/welcome', "../src/Controller/welcomeListController.php");
++get('/home', "../src/View/home.php");
+ 
+ get('/connected', "../src/Controller/LoginController.php");
+ get('/logout', "../src/Controller/LogoutController.php");
+-get('/create', "../src/View/php/create.php");
+-post('/create', "../src/View/php/create.php");
+-post('/connected', "../src/View/php/LoginController.php");
++get('/create', "../src/View/create.php");
++post('/create', "../src/View/create.php");
++post('/connected', "../src/View/LoginController.php");
+ 
+ 
+ 
+@@ -41,4 +45,4 @@
+ // For GET or POST
+ // The 404.php which is inside the views folder will be called
+ // The 404.php has access to $_GET and $_POST
+-any('/404','src/View/php/404.php');
++any('/404','../src/View/404.php');
+Index: src/Model/welcomeList.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nnamespace App\\Model;\r\nclass WelcomeList{\r\n\r\n\r\n    public function WelcomeList($tableName)\r\n    {\r\n        $invoiceId = $this->db->prepare(\"SELECT * FROM $tableName ORDER BY date DESC LIMIT 5\");\r\n        $invoiceId->execute();\r\n        $invoiceIdFetch = $invoiceId->fetch();\r\n        return $invoiceIdFetch['number'] date company_id;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Model/welcomeList.php b/src/Model/welcomeList.php
+--- a/src/Model/welcomeList.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ b/src/Model/welcomeList.php	(date 1629974218160)
+@@ -1,13 +1,22 @@
+-<?php
+-namespace App\Model;
+-class WelcomeList{
++<?php namespace App\Model;
++class WelcomeList
++{
++    public function __construct()
++    {
++        global $db;
++        $this->db = $db;
++        $query;
++    }
+ 
++    public function setWelcomeList($param)
++    {
++        $query = $this->db->prepare("SELECT $param[0] FROM $param[1] INNER JOIN $param[2] ON $param[3] ORDER BY $param[4] DESC LIMIT 5");
++        $query->execute();
++        $this->query = $query;
++    }
+ 
+-    public function WelcomeList($tableName)
++    public function getWelcomeList()
+     {
+-        $invoiceId = $this->db->prepare("SELECT * FROM $tableName ORDER BY date DESC LIMIT 5");
+-        $invoiceId->execute();
+-        $invoiceIdFetch = $invoiceId->fetch();
+-        return $invoiceIdFetch['number'] date company_id;
++        return $this->query;
+     }
+ }
+\ No newline at end of file
+Index: src/Controller/WelcomeListController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\n\r\n\r\nnew WelcomeList();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Controller/WelcomeListController.php b/src/Controller/WelcomeListController.php
+--- a/src/Controller/WelcomeListController.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ b/src/Controller/WelcomeListController.php	(date 1629974218159)
+@@ -1,5 +1,40 @@
+ <?php
+ 
++use App\Model\WelcomeList;
++
++$invoices = new WelcomeList();
++$contacts = new WelcomeList();
++$companies = new WelcomeList();
++
++
+ 
+ 
+-new WelcomeList();
+\ No newline at end of file
++$invoices->setWelcomeList([
++  "*",
++  "invoice as i",
++  "company as c",
++  "i.company_id = c.id",
++  "date"
++]);
++
++$contacts->setWelcomeList([
++  "*",
++  "people as p",
++  "company as c",
++  "p.company_id = c.id",
++  "p.id"
++]);
++
++$companies->setWelcomeList([
++  "c.name, VAT_number, t.name as type",
++  "company as c",
++  "type as t",
++  "c.type_id = t.id",
++  "c.id"
++]);
++
++$_SESSION['invoice'] = $invoices->getWelcomeList()->fetch();
++$_SESSION['contact'] = $contacts->getWelcomeList()->fetch();
++$_SESSION['compagnie'] = $companies->getWelcomeList()->fetch();
++
++header('location: /home');
+\ No newline at end of file
+Index: src/View/php/footer.php
+===================================================================
+diff --git a/src/View/php/footer.php b/src/View/php/footer.php
+deleted file mode 100644
+--- a/src/View/php/footer.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,11 +0,0 @@
+-<?php
+-?>
+-
+-<footer>
+-    <P>Vive la COGIP ! </P>
+-</footer>
+-</body>
+-</html>
+-
+-
+-
+Index: src/View/php/create.php
+===================================================================
+diff --git a/src/View/php/create.php b/src/View/php/create.php
+deleted file mode 100644
+--- a/src/View/php/create.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,45 +0,0 @@
+-<?php
+-
+-use App\Helper\Form;
+-use App\Helper\User;
+-use App\Model\Connect;
+-
+-session_start();
+-
+-
+-$isemptyUsername = empty($_POST['username']);
+-$isemptyEmail = empty($_POST['email']);
+-$isemptyPassword = empty($_POST['password']);
+-$issetVar = isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']);
+-$filterUsername = isset($_POST['username']) ? filter_var($_POST['username'], FILTER_SANITIZE_STRING) : null;
+-$filterEmail = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) : null;
+-$filterPassword = isset($_POST['password']) ? filter_var($_POST['password'], FILTER_SANITIZE_STRING) : null;
+-
+-
+-$form = new Form();
+-
+-if (isset($_SESSION['idUser'])){
+-    header('location: home');
+-}else     echo $form->button('se connecter','home');
+-
+-$form->openForm('post', '');
+-echo $form->textarea('username', '');
+-if ($isemptyUsername) {
+-    echo "<p>cette valeur est obligatoire </p>";
+-}
+-echo $form->textarea('email', '');
+-if ($filterEmail) echo "<p>cest le bon format</p>";
+-else echo "<p>cest pas le bon format</p>";
+-if ($isemptyEmail) {
+-    echo "<p>cette valeur est obligatoire </p>";
+-}
+-echo $form->textarea('password', '');
+-if ($isemptyPassword) {
+-    echo "<p>cette valeur est obligatoire </p>";
+-}
+-echo $form->submit('envoyer');
+-$user = new User(trim($_POST['username']), trim($_POST['email']), password_hash($_POST['password'],PASSWORD_DEFAULT));
+-$form->closeForm();
+-$user->createUser();
+-
+-?>
+\ No newline at end of file
+Index: src/View/php/404.php
+===================================================================
+diff --git a/src/View/php/404.php b/src/View/php/404.php
+deleted file mode 100644
+--- a/src/View/php/404.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,14 +0,0 @@
+-<!doctype html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport"
+-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+-    <title>error</title>
+-</head>
+-<body>
+-<p>error 404</p>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: src/Helper/Form.php
+===================================================================
+diff --git a/src/Helper/Form.php b/src/Helper/Form.php
+deleted file mode 100644
+--- a/src/Helper/Form.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,146 +0,0 @@
+-<?php
+-namespace App\Helper;
+-/**
+- * classform
+- * fast create form
+- */
+-
+-class Form
+-{
+-    /**
+-     * @var string  ce qui entour les input etc
+-     */
+-    public $surround = 'p';
+-
+-    /**
+-     * @var array|mixed donnée du formulaire
+-     */
+-    private $data;
+-
+-    /**
+-     * @param array $data donnée utilisé
+-     */
+-    public function __construct($data = array())
+-    {
+-        $this->data = $data;
+-    }
+-
+-    /**
+-     * @param $type
+-     * @param $name
+-     * @param $value
+-     * @return string
+-     */
+-    public function input($type, $name, $value)
+-    {
+-        return $this->surround("<input type='$type ' name ='$name' value='$value'>");
+-    }
+-
+-    /**
+-     * @param $html code html a entourer
+-     * @return string
+-     */
+-    private function surround($html)
+-    {
+-        return "<{$this->surround}>{$html}</{$this->surround}>";
+-
+-    }
+-
+-    /**
+-     * @param $type input TYPE RADIO
+-     * @return string
+-     */
+-    public function inputRadio($name, array $values)
+-    {
+-        echo "<p>select your $name</p>";
+-        foreach ($values as $value) {
+-            echo $this->surround(" 
+-            <div> 
+-                <input type='radio' id='$value' name = '$name' value = '$value'>
+-                <label for='$value' >$value</label>
+-            </div > ");
+-        }
+-    }
+-
+-    public function inputCheckbox($name, array $values)
+-    {
+-        echo "select your $name";
+-        foreach ($values as $value) {
+-            echo $this->surround("
+-        <div>
+-            <input type='checkbox' id='$value'  name='$name' value='$value'>
+-            <label for='$value'>$value</label>
+-        </div>
+-        ");
+-        }
+-    }
+-
+-    /**
+-     * @return string select utilisé par le form
+-     */
+-    public function select($name, array $values)
+-    {
+-
+-        echo "<p><label for='$name'>Choose a value:</label></p>
+-               <select name='$name' id='$name'>
+-               <option value=''>--Please choose an option--</option>";
+-        foreach ($values as $value) {
+-            echo $this->surround("
+-            <option value='$value'>$value</option>
+-        
+-        ");
+-        }
+-        echo "</select>";
+-    }
+-
+-    /**
+-     * @return string textarea utilisé par le form
+-     */
+-    public function textarea($name, $value)
+-    {
+-        return $this->surround("
+-    <label for='$value'>$name :</label>
+-        <textarea id='$value' name='$name' rows='5' cols='33'>$value</textarea>"
+-        );
+-    }
+-
+-    /**
+-     * @return string bouton submit avec choix du texte
+-     */
+-    public function submit($html)
+-    {
+-        return $this->surround("<button type='submit'>$html</button>");
+-    }
+-
+-    /**
+-     * @param $method ouvre un formulaire avec la method et laction choisis
+-     * @param $action
+-     */
+-    public function openForm($method, $action){
+-        echo "<form action='$action' method='$method'>";
+-    }
+-
+-    /**
+-     * @return string  button avec choix du texte
+-     */
+-    public function button($html, $href)
+-    {
+-        return "<a href='$href' target='blank'><button type='button'>$html</button></a>";
+-    }
+-
+-    /**
+-     * ferme un formulaire
+-     */
+-    public function closeForm(){
+-        echo "</form>";
+-    }
+-
+-    /**
+-     * @param $index index de la valeur recup
+-     * @return mixed|null
+-     */
+-    private function getValue($index)
+-    {
+-        return isset($this->data[$index]) ? $this->data[$index] : null;
+-    }
+-}
+\ No newline at end of file
+Index: src/View/php/login.php
+===================================================================
+diff --git a/src/View/php/login.php b/src/View/php/login.php
+deleted file mode 100644
+--- a/src/View/php/login.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,30 +0,0 @@
+-<?php
+-if (isset($_SESSION['username'])){
+-    header('location: /welcome');
+-}
+-session_start();
+-?>
+-
+-
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>login</title>
+-</head>
+-<body>
+-<!-- insert header here -->
+-<h1>Welcome to the COGIP</h1>
+-<h2>Bienvenue dans l'espace de connexion de la COGIP</h2>
+-<form method='post'>
+-    <label for="username">Votre identifiant</label>
+-    <input type="text" name="Login" id="username" class='username'>
+-    <label for="mdp">Votre mot de passe</label>
+-    <input type="password" name="Password" id="mdp" class='mdp'>
+-    <input type="submit" value="Se connecter">
+-</form>
+-<!-- insert footer here -->
+-</body>
+-</html>
+\ No newline at end of file
+Index: src/Helper/Header.php
+===================================================================
+diff --git a/src/Helper/Header.php b/src/Helper/Header.php
+deleted file mode 100644
+--- a/src/Helper/Header.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,76 +0,0 @@
+-<?php
+-
+-namespace App\Helper;
+-
+-class Header
+-{
+-    /**
+-     * @param string $linkJs
+-     * @param string $linkCss
+-     * @param string $title
+-     * @example
+-     */
+-    function openHtml(string $linkJs,
+-                      string $linkCss,
+-                      string $title)
+-    {
+-        echo "<!doctype html>
+-        <html lang='en'>
+-        <head>
+-        <meta charset='UTF-8'>
+-        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+-        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+-        <link href=' $linkCss ' rel='stylesheet'>
+-        <script type='text/javascript' src=' $linkJs '></script>
+-        <title>$title</title>
+-        </head>
+-        <body>
+-        <header>";
+-    }
+-
+-    function navNotConnected()
+-    {
+-        echo "<ul>
+-          <li><a href='home'>Connection</a></li>
+-
+-        </ul>";
+-    }
+-    public function navAdmin(array $name, array $values)
+-    {
+-         echo "<ul><li><a href='home'>logout</a></li>";
+-        for ($i=0; $i< count($values); $i++) {
+-           echo "<li><a href=' $values[$i]'>$name[$i]</a></li>";
+-        }
+-        echo "</ul>";
+-    }
+-    public function navDeroulantAdmin(array $name, array $values)
+-    {
+-        echo "<ul><li>Admin</li><ul>";
+-
+-        for ($i=0; $i< count($values); $i++) {
+-            echo "<li><a href=' $values[$i]'>$name[$i]</a></li>";
+-        }
+-        echo "</ul></ul>";
+-    }
+-    public function navDeroulantModo(array $name, array $values)
+-    {
+-        echo "<ul><li>Modo</li><ul>";
+-
+-        for ($i=0; $i< count($values); $i++) {
+-            echo "<li><a href=' $values[$i]'>$name[$i]</a></li>";
+-        }
+-        echo "</ul></ul>";
+-    }
+-    public function navModo(array $name, array $values)
+-    {
+-        echo "<ul><li><a href='home'>logout</a></li>";
+-        for ($i=0; $i< count($values); $i++) {
+-            echo "<li><a href=' $values[$i]'>$name[$i]</a></li>";
+-        }
+-        echo "</ul>";
+-    }
+-
+-    function closeHeader(){
+-        echo '</header>';
+-    }
+-}
+Index: src/View/php/header.php
+===================================================================
+diff --git a/src/View/php/header.php b/src/View/php/header.php
+deleted file mode 100644
+--- a/src/View/php/header.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,30 +0,0 @@
+-<?php
+-session_start();
+-?>
+-
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <script type="text/javascript" src="../../../public/assets/js/main.js"></script>
+-    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/main.css">
+-    <title>COGIP</title>
+-</head>
+-<body>
+-
+-<nav class="navbar">
+-    <p>Vous êtes connecté en tant que : <?php echo $_SESSION['username'] ?> </p>
+-    <ol>
+-        <li class="home"><a href="#">Home</a></li>
+-        <li class="invoices"><a href="#">Invoices</a></li>
+-        <li class="compagnies"><a href="#">Compagnies</a></li>
+-        <li class="contacts"><a href="#">Contacts</a></li>
+-    </ol>
+-
+-    <input class="Logout"
+-           type="button"
+-           value="Log out">
+-
+-</nav>
+Index: src/View/php/welcome.php
+===================================================================
+diff --git a/src/View/php/welcome.php b/src/View/php/welcome.php
+deleted file mode 100644
+--- a/src/View/php/welcome.php	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ /dev/null	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
+@@ -1,59 +0,0 @@
+-<?php
+-session_start();
+-if (!isset($_SESSION['username'])) {
+-    header('location: /connect');
+-}
+-require 'header.php';
+-?>
+-
+-    <body>
+-    <!-- Insert header here -->
+-    <h1>Welcome to the COGIP</h1>
+-    <p>Bonjour !</p>
+-    <div>
+-        <label for="invoice">Last invoice :</label>
+-        <table id='invoice'>
+-            <tr>
+-                <th>Invoice number</th>
+-                <th>Dates</th>
+-                <th>Company</th>
+-            </tr>
+-            <tr>
+-                <td>xInvoice</td>
+-                <td>xDate</td>
+-                <td>xCompany</td>
+-            </tr>
+-        </table>
+-        <label for="contact">Last contacts :</label>
+-        <table id='contact'>
+-            <tr>
+-                <th>Name</th>
+-                <th>Phone</th>
+-                <th>e-mail</th>
+-                <th>Company</th>
+-            </tr>
+-            <tr>
+-                <td>xName</td>
+-                <td>xPhone</td>
+-                <td>xe-mail</td>
+-                <td>xCompany</td>
+-            </tr>
+-        </table>
+-        <label for="companies">Last companies :</label>
+-        <table id='companies'>
+-            <tr>
+-                <th>Name</th>
+-                <th>TVA</th>
+-                <th>Country</th>
+-                <th>Type</th>
+-            </tr>
+-            <tr>
+-                <td>xName</td>
+-                <td>xTVA</td>
+-                <td>xCountry</td>
+-                <td>xType</td>
+-            </tr>
+-        </table>
+-    </div>
+-
+-<?php require 'footer.php';
+Index: .idea/PHP-challenge-2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"WEB_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/spec\" isTestSource=\"true\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/tests\" isTestSource=\"true\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" packagePrefix=\"App\\\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/public\" isTestSource=\"false\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/vendor/composer\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/PHP-challenge-2.iml b/.idea/PHP-challenge-2.iml
+--- a/.idea/PHP-challenge-2.iml	(revision 6933b592e0337b6cccd7cc28f96d850cff08c697)
++++ b/.idea/PHP-challenge-2.iml	(date 1629974218157)
+@@ -5,7 +5,6 @@
+       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="App\" />
+-      <sourceFolder url="file://$MODULE_DIR$/public" isTestSource="false" />
+       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+     </content>
+     <orderEntry type="inheritedJdk" />

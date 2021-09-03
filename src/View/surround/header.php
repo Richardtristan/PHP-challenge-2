@@ -13,6 +13,7 @@ session_start();
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
     <title>COGIP</title>
 </head>
+
 <body>
 <header>
     <?php if(!isset($_SESSION['username']) && !isset($_SESSION['grade']) || $_SESSION['grade'] == '' ){echo"

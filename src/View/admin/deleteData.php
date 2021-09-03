@@ -9,7 +9,6 @@
         <input type="radio" id="oui"
                name="oui" value="oui">
         <label for="oui">Yes</label>
-
         <input type="radio" id="non"
                name="non" value="non">
         <label for="contactChoice3">NO</label>
