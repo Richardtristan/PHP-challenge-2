@@ -27,8 +27,8 @@ if ($issetVar && !$isemptyUsername && $filterPassword && $filterUsername) {
         }
         else{$_SESSION['grade'] = 'Admin';}
         require __DIR__.'/WelcomeListController.php';
-    } else {
-        echo '<p>password or username is not valid</p>';
+    } else {?>
+         <script> alert('password or username is not valid')</script><?php
     }
 }
 
@@ -37,6 +37,6 @@ if (!isset($_SESSION['idUser'])) {
 }
 
 
-
+?>
 
 
