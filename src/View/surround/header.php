@@ -21,7 +21,7 @@ session_start();
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
     <!--<defs>
     <clipPath id='clip'>-->
-        <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+        <polygon fill='#FCFEDE' points='0,100 135,0 100,100'></polygon> 
     <!--</clipPath>
     </defs>-->
     </svg>
@@ -130,7 +130,7 @@ session_start();
     <?php if($_SESSION['grade'] === 'Modo'){echo"
     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-        <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+        <polygon fill='#FCFEDE' points='0,100 135,0 100,100'></polygon> 
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
         <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
