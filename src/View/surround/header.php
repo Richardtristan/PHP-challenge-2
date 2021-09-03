@@ -37,7 +37,7 @@ session_start();
         </div>
         <div id='navbarBasicExample' class='navbar-menu'>
             <div class='navbar-start'>
-            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo'>
+            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' id='img'>
                 <a class='navbar-item' href='/login'>Home</a>
 
                 <a class='navbar-item' href='/invoice'>Invoices</a>
@@ -67,7 +67,7 @@ session_start();
          </div>
          <div id='navbarBasicExample' class='navbar-menu'>
              <div class='navbar-start'>
-             <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo'>
+             <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' id='img'>
                  <a class='navbar-item' href='/login'>Home</a>
 
                 <a class='navbar-item' href='/invoice'>Invoices</a>

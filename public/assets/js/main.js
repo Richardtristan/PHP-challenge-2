@@ -58,6 +58,11 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 }
 
 setInterval(updateGradient,10);
+//---------------------------------------------
+let img = document.getElementById('img');
+
+window.onload = () => {
+  img.style.display='initial';}
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -66,14 +71,18 @@ const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.na
 
 // Check if there are any navbar burgers
 if ($navbarBurgers.length > 0) {
+  
+   
 
 // Add a click event on each of them
 $navbarBurgers.forEach( el => {
 el.addEventListener('click', () => {
+  let img = document.getElementById('img');
 
 // Get the target from the "data-target" attribute
 const target = el.dataset.target;
 const $target = document.getElementById(target);
+img.style.display='none';
 
 // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
 el.classList.toggle('is-active');
@@ -83,3 +92,4 @@ $target.classList.toggle('is-active');
 });
 }
 });
+
