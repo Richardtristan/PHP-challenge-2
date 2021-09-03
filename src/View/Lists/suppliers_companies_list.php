@@ -1,6 +1,7 @@
 <?php require __DIR__.'/../surround/header.php' ?>
-<div>
-    <label for="companies">List of suppliers companies :</label>
+<div class='block'>
+<div class='tables'>
+    <label for="companies" class='Hhome'>List of suppliers companies :</label>
     <table id='compagnies'>
         <thead>
             <tr>
@@ -22,5 +23,6 @@
             ?>
         </tbody>
     </table>
+</div>
 </div>
 <?php require __DIR__.'/../surround/footer.php' ?>

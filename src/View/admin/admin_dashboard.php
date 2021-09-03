@@ -1,13 +1,19 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 
-    <div>
-        <label for="userInfo">Changing informations</label>
+    <div class='block'>
+    <div class='tables'>
+        <label for="userInfo" class='Hhome'>Changing informations</label>
         <table id='userInfo'>
+        <thead>
             <tr>
                 <th>Username</th>
                 <th>email</th>
                 <th>Access right</th>
+                <th>Delete</th>
+                <th>Update</th>
             </tr>
+        </thead>
+        <tbody>
             <?php foreach ($users as $data) {
                 ?>
 
@@ -21,6 +27,8 @@
             }
             ?>
         </table>
+        </tbody>
+        </div>
     </div>
 
 <?php require __DIR__.'/../surround/footer.php' ?>

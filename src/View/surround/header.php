@@ -10,11 +10,7 @@ session_start();
     <script type='text/javascript' src='<?php dirname(__FILE__)?>../../../../assets/js/main.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'></script>
     <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/main.css'>
-    <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/blob.css'>
-    <link rel='stylesheet' type='text/css' href='<?php dirname(__FILE__)?>../../../../assets/css/login.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
-    <link rel='stylesheet' href='<?php dirname(__FILE__)?>../../../../assets/css/header.css'>
-    <link rel="stylesheet" type="text/css" href="<?php dirname(__FILE__)?>../../../../assets/css/table.css">
     <title>COGIP</title>
 </head>
 
@@ -23,10 +19,14 @@ session_start();
     <?php if(!isset($_SESSION['username']) && !isset($_SESSION['grade']) || $_SESSION['grade'] == '' ){echo"
     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-        <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+    <!--<defs>
+    <clipPath id='clip'>-->
+        <polygon fill='#FCFEDE' points='0,100 135,0 100,100'></polygon> 
+    <!--</clipPath>
+    </defs>-->
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
-        <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->
+        <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
     </svg>
         <div class='navbar-brand'>
             <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
@@ -37,7 +37,7 @@ session_start();
         </div>
         <div id='navbarBasicExample' class='navbar-menu'>
             <div class='navbar-start'>
-            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' style='margin-left: -100px;'>
+            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' id='img'>
                 <a class='navbar-item' href='/login'>Home</a>
 
                 <a class='navbar-item' href='/invoice'>Invoices</a>
@@ -51,24 +51,24 @@ session_start();
     </header>
 " ; } ?>
     <?php if($_SESSION['grade'] === 'Admin'){echo"
-    <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
-    <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-        <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
-    </svg>
-    <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
-        <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->
-    </svg>
-        <div class='navbar-brand'>
-            <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
-                <span aria-hidden='true'></span>
-                <span aria-hidden='true'></span>
-                <span aria-hidden='true'></span>
-            </a>
-        </div>
-        <div id='navbarBasicExample' class='navbar-menu'>
-            <div class='navbar-start'>
-            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' style='margin-left: -100px;'>
-                <a class='navbar-item' href='/home'>Home</a>
+     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
+     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
+         <polygon fill='#FCFEDE' points='0,100 135,0 100,100'></polygon> 
+     </svg>
+     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
+         <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
+     </svg>
+         <div class='navbar-brand'>
+             <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
+                 <span aria-hidden='true'></span>
+                 <span aria-hidden='true'></span>
+                 <span aria-hidden='true'></span>
+             </a>
+         </div>
+         <div id='navbarBasicExample' class='navbar-menu'>
+             <div class='navbar-start'>
+             <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' id='img'>
+                 <a class='navbar-item' href='/login'>Home</a>
 
                 <a class='navbar-item' href='/invoice'>Invoices</a>
 
@@ -130,10 +130,10 @@ session_start();
     <?php if($_SESSION['grade'] === 'Modo'){echo"
     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-        <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
+        <polygon fill='#FCFEDE' points='0,100 135,0 100,100'></polygon> 
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
-        <polygon fill='#CCFFFF' points='60,0 100,0 100,100'></polygon> <!--Thx to Key-->
+        <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->
     </svg>
         <div class='navbar-brand'>
             <a role='button' class='navbar-burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
@@ -144,9 +144,10 @@ session_start();
         </div>
         <div id='navbarBasicExample' class='navbar-menu'>
             <div class='navbar-start'>
-            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo' style='margin-left: -100px;'>
-                <a class='navbar-item' href='/home'>Home</a>
+            <img src='https://github.com/Richardtristan/PHP-challenge-2/blob/main/public/assets/img/logo.png?raw=true' alt='logo'>
 
+                <a class='navbar-item' href='/login'>Home</a>
+                
                 <a class='navbar-item' href='/invoice'>Invoices</a>
 
                 <a class='navbar-item' href='/contact'>Contacts</a>

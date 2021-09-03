@@ -23,7 +23,7 @@
         </select>
         <label for="tva">Modify date</label>
         <input type="date" name="date" id="date" value"<?php echo $invoice['date']?>">
-        <input type="submit" name="update_submit">
+        <input type="submit" name="update_submit" class='log'>
     </form>
 </div>
 

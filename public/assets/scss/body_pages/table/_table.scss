@@ -1,0 +1,79 @@
+$font : 'Source Serif Pro', serif;
+$font_surround: 'Permanent Marker', cursive;
+
+@mixin font {
+  text-align: center;
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 400;
+}
+.tables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-between;
+  th {
+    color: white;
+    padding: 5px;
+  }
+}
+
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  text-align: center;
+  
+}
+label {
+  padding: 40px;
+  @include font;
+}
+
+  tr {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  thead {
+    th {
+      background-color: #55608f;
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: rgba(0,0,0,0.3);
+      }
+    }
+    td {
+      position: relative;
+      padding: 3px;
+      &:hover {
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -9999px;
+          bottom: -9999px;
+          background-color: rgba(0,0,0,0.2);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .Hhome {
+    @include font;
+    font-size: 40px;
+  }
+
+ 

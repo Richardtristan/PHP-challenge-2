@@ -1,7 +1,9 @@
 <?php require __DIR__.'/../surround/header.php'; ?>
-<h1>Contact : <!--Insert contact name--></h1>
-<div>
-    <table>
+<div class='block'>
+<h1 class='Hhome'>Contact : <!--Insert contact name--></h1>
+<div class='tables'>
+    <table id='introDetails'>
+    <thead>
         <tr>
             <th>Contact</th>
             <td><?php echo $contact["lastname"] . " " . $contact["firstname"] ?></td>
@@ -14,17 +16,19 @@
             <th>Email</th>
             <td><?php echo $contact["email"] ?></td>
         </tr>
+        <thead>
     </table>
-</div>
-<div>
     <label for="contactDetails">Invoices linked to <?php echo $contact["lastname"] . " " . $contact["firstname"] ?></label>
     <table id='contactDetails'>
+    <thead>
         <tr>
             <th>Invoice number</th>
             <th>Date</th>
         </tr>
+        </thead>
         <?php foreach ($invoices as $invoice) {
         ?>
+        <tbody>
         <tr>
             <td><?php echo $invoice["number"] ?></td>
             <td><?php echo $invoice["date"] ?></td>
@@ -32,6 +36,8 @@
         <?php
             }
             ?>
+            
     </table>
+</div>
 </div>
 <?php require __DIR__.'/../surround/footer.php' ?>

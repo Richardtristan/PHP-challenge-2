@@ -1,0 +1,86 @@
+$font : 'Source Serif Pro', serif;
+$font_surround: 'Permanent Marker', cursive;
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+.navbar {
+  height: 20vh;
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    font: $font_surround;
+    font-weight: 400;
+    font-size: 18px;
+
+    .navbar-start {
+      margin-left: 100px;
+      margin-top: -100px;
+      font-weight: 400;
+      font-size: 18px;
+      img {
+        margin-top: 50px;
+        margin-left: -120px;
+        width: 30vw;
+        height: 25vh;
+      }
+    }
+    .navbar-end {
+      margin-left: -1100px;
+      margin-top: -100px;
+    }
+    .navbar-item, .navbar-link {
+        color: black; 
+        &:hover{
+          background-color: transparent;
+          margin-bottom: 5px;
+          font-family: $font_surround;
+          font-weight: 400;
+          font-size: 18px;
+          color: black;
+        }
+    }
+    p {
+      text-align: center;
+  }
+  }
+  
+  // #gradient
+  // {
+  //  width: 100%;
+  //  height: 800px;
+  //  padding: 0px;
+  //  margin: 0px;
+  // }
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+.svg2 {
+  height: 200px;
+}
+
+.navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
+    display: block;
+    margin-top: -120px;
+    font-family: $font;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.navbar-item.has-dropdown.is-active .navbar-link,
+.navbar-item.has-dropdown:focus .navbar-link,
+.navbar-item.has-dropdown:hover .navbar-link
+{
+      background-color: transparent !important;
+    }
+
+.navbar-dropdown {
+  background-color: #ffffffc4 !important;
+}

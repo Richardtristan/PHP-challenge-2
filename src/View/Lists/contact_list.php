@@ -1,14 +1,19 @@
 <?php require __DIR__.'/../surround/header.php';
 ?>
 
-    <div>
-    <table id='contact_list'>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Company</th>
-        </tr>
-        <?php foreach ($contacts as $contact) {
+<div class='block'>
+    <div  class='tables'>
+    <label for="contactList" class='Hhome'>List of contacts :</label>
+        <table id='contactList'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($contacts as $contact) {
             ?>
             <tr>
                 <td><a href="/contact_details/id/<?php echo $contact['id']?>"><?php echo $contact["firstname"] . ' ' . $contact["lastname"]?></a></td>
@@ -16,8 +21,10 @@
                 <td><?php echo $contact["name"] ?></td>
             </tr>
             <?php
-        }
-        ?>
-    </table>
+            }
+            ?>
+        </tbody>
+        </table>
+    </div>
 </div>
 <?php require __DIR__.'/../surround/footer.php' ?>
