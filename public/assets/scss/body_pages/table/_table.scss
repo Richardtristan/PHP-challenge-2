@@ -17,8 +17,9 @@ $font_surround: 'Permanent Marker', cursive;
     color: white;
     padding: 5px;
   }
-
 }
+
+
 table {
   width: 800px;
   border-collapse: collapse;
@@ -35,7 +36,7 @@ label {
   @include font;
 }
 
-  th, td {
+  tr {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -74,3 +75,5 @@ label {
     @include font;
     font-size: 40px;
   }
+
+ 

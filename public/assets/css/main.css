@@ -96,10 +96,6 @@ svg {
   height: 200px;
 }
 
-.svg2 {
-  height: 200px;
-}
-
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
   display: block;
   margin-top: -120px;
@@ -139,6 +135,10 @@ svg {
 .tables th {
   color: white;
   padding: 5px;
+}
+
+#notLabelled {
+  margin-top: 120px;
 }
 
 table {
@@ -400,7 +400,7 @@ form {
           align-items: center;
 }
 
-button, .log {
+button, .log, input[type=submit] {
   margin-top: 20px;
   background: #ccffff88;
   height: 40px;
@@ -414,7 +414,7 @@ button, .log {
   cursor: pointer;
 }
 
-button :hover, .log :hover {
+button :hover, .log :hover, input[type=submit] :hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
