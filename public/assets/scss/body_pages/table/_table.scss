@@ -1,7 +1,9 @@
-$font_surround: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font : 'Source Serif Pro', serif;
+$font_surround: 'Permanent Marker', cursive;
+
 @mixin font {
   text-align: center;
-  font-family: $font_surround;
+  font-family: $font;
   font-size: 25px;
   font-weight: 400;
 }
@@ -29,7 +31,7 @@ table {
   
 }
 label {
-  padding: 20px;
+  padding: 40px;
   @include font;
 }
 
@@ -70,4 +72,5 @@ label {
 
   .Hhome {
     @include font;
+    font-size: 40px;
   }

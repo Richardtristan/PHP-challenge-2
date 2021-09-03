@@ -1,7 +1,7 @@
 <?php require __DIR__.'/../surround/header.php' ?>
 <div class='block'>
 <div class='tables'>
-    <label for="companies">List of clients companies :</label>
+    <label for="companies" class='Hhome'>List of clients companies :</label>
     <table id='compagnies'>
         <thead>
             <tr>

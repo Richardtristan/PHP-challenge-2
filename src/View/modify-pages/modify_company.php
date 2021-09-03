@@ -3,11 +3,11 @@
 
     <div class='form'>
     <form action="" method="POST">
-        <label for="name">Modify name of the company</label>
+        <label for="name" class='labelModif'>Modify name of the company</label>
         <input type="text" name="name" id="name" value="<?php echo $company['name'] ?>">
-        <label for="vat">Modify VAT number</label>
+        <label for="vat" class='labelModif'>Modify VAT number</label>
         <input type="text" name="vat" id="vat" value="<?php echo $company['VAT_number'] ?>">
-        <label for="type">Modify company type</label>
+        <label for="type" class='labelModif'>Modify company type</label>
         <select name="type" id="type">
             <?php foreach ($types as $data) {
                 ?>
@@ -16,9 +16,9 @@
             }
             ?>
         </select>
-        <label for="country">Modify country</label>
+        <label for="country" class='labelModif'>Modify country</label>
         <input type="text" name="country" id="country" value="<?php echo $company['country'] ?>">
-        <input type="submit" name="update_submit">
+        <input type="submit" name="update_submit" class='log'>
     </form>
 </div>
 

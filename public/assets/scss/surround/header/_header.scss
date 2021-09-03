@@ -1,4 +1,5 @@
-$font_surround: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font : 'Source Serif Pro', serif;
+$font_surround: 'Permanent Marker', cursive;
 
 *, ::after, ::before {
   box-sizing: inherit;
@@ -70,7 +71,7 @@ svg {
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
     display: block;
     margin-top: -120px;
-    font-family: $font_surround;
+    font-family: $font;
     font-weight: 400;
     font-size: 15px;
 }

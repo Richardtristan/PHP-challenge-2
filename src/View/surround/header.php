@@ -19,11 +19,11 @@ session_start();
     <?php if(!isset($_SESSION['username']) && !isset($_SESSION['grade']) || $_SESSION['grade'] == '' ){echo"
     <nav class='navbar' role='navigation' aria-label='main navigation' id='admin'>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg1'>
-    <defs>
-    <clipPath id='clip'>
+    <!--<defs>
+    <clipPath id='clip'>-->
         <polygon fill='white' points='0,100 135,0 100,100'></polygon> 
-    </clipPath>
-    </defs>
+    <!--</clipPath>
+    </defs>-->
     </svg>
     <svg viewbox='0 0 100 100' preserveAspectRatio='none' class='svg2'>
         <polygon fill='#CCFFFF' points='60,0 100,0 100,70'></polygon> <!--Thx to Key-->

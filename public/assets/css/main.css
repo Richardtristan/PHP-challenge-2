@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Serif+Pro:wght@300;400&display=swap");
 body, html {
   height: 100%;
 }
@@ -15,7 +16,7 @@ footer {
 }
 
 footer p {
-  font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font: "Source Serif Pro", serif !important;
   margin-top: 60px;
   margin-left: 45px;
   font-weight: 400;
@@ -23,6 +24,7 @@ footer p {
 }
 
 footer .connexion {
+  font: "Source Serif Pro", serif !important;
   font-size: 20px;
   font-weight: 200;
   margin-left: 45px;
@@ -41,7 +43,7 @@ footer .connexion {
   padding: 0px;
   margin: 0px;
   color: black;
-  font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font: "Permanent Marker", cursive;
   font-weight: 400;
   font-size: 18px;
 }
@@ -72,7 +74,7 @@ footer .connexion {
 .navbar .navbar-item:hover, .navbar .navbar-link:hover {
   background-color: transparent;
   margin-bottom: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Permanent Marker", cursive;
   font-weight: 400;
   font-size: 18px;
   color: black;
@@ -101,7 +103,7 @@ svg {
 .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
   display: block;
   margin-top: -120px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Source Serif Pro", serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -152,9 +154,9 @@ table {
 }
 
 label {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Source Serif Pro", serif;
   font-size: 25px;
   font-weight: 400;
 }
@@ -190,9 +192,10 @@ tbody td:hover:before {
 
 .Hhome {
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Source Serif Pro", serif;
   font-size: 25px;
   font-weight: 400;
+  font-size: 40px;
 }
 
 .title {
@@ -202,8 +205,7 @@ tbody td:hover:before {
 
 .welcome {
   font-size: 30px;
-  margin-top: 100px;
-  margin-bottom: 200px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -217,7 +219,7 @@ tbody td:hover:before {
   width: 250px;
   border-radius: 20px;
   text-align: center;
-  font-family: Didot, serif;
+  font-family: "Source Serif Pro", serif !important;
   font-size: 25px;
   z-index: 1;
 }
@@ -225,10 +227,9 @@ tbody td:hover:before {
 .mdp {
   height: 40px;
   width: 250px;
-  margin-top: 30px;
   border-radius: 20px;
   text-align: center;
-  font-family: Didot, serif;
+  font-family: "Source Serif Pro", serif !important;
   font-size: 25px;
   z-index: 1;
 }
@@ -236,17 +237,130 @@ tbody td:hover:before {
 .log {
   height: 40px;
   width: 250px;
-  margin-top: 20px;
+  margin-top: 30px;
   border-radius: 15px;
-  letter-spacing: 2px;
+  letter-spacing: 15px;
   text-transform: uppercase;
-  font-family: Didot, serif;
+  font-family: "Source Serif Pro", serif;
   font-size: 20px;
 }
 
+.logForm {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logForm label {
+  margin: 5px;
+  padding: 20px;
+}
+
+.logForm :first-child {
+  margin-top: 80px;
+}
+
+.deleteForm {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.deleteForm label {
+  margin: 5px;
+  padding: 20px;
+}
+
+.deleteForm :first-child {
+  margin-top: 60px;
+}
+
+h1 {
+  margin-top: 30px !important;
+}
+
+p.Hhome {
+  font-size: 30px;
+}
+
+/* MAIN */
+/* =============================================== */
+.rad-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: rgba(204, 204, 204, 0.14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#40fcab), to(#406ffc));
+  background: linear-gradient(to right bottom, #40fcab, #406ffc);
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: #e6e6e6;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-bottom: 26px;
+}
+
+.rad-input:checked + .rad-design::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.rad-text {
+  color: #999999;
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.rad-input:checked ~ .rad-text {
+  color: #666666;
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 html {
@@ -271,5 +385,78 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+}
+
+form {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button, .log {
+  margin-top: 20px;
+  background: #ccffff88;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  -webkit-box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+          box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button :hover, .log :hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+form input, button, select {
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form input, select {
+  background: #b88aec1f;
+  padding: 10px;
+  padding-left: 20px;
+  height: 40px;
+  width: 250px;
+  font-size: 14px;
+  border-radius: 50px;
+  -webkit-box-shadow: -6px -6px 6px white, inset -6px -6px 10px #0000002f;
+          box-shadow: -6px -6px 6px white, inset -6px -6px 10px #0000002f;
+}
+
+form input ::-webkit-input-placeholder, select ::-webkit-input-placeholder {
+  color: gray;
+}
+
+form input :-ms-input-placeholder, select :-ms-input-placeholder {
+  color: gray;
+}
+
+form input ::-ms-input-placeholder, select ::-ms-input-placeholder {
+  color: gray;
+}
+
+form input ::placeholder, select ::placeholder {
+  color: gray;
+}
+
+p, h1, h2 {
+  font-style: "Source Serif Pro", serif;
 }
 /*# sourceMappingURL=main.css.map */

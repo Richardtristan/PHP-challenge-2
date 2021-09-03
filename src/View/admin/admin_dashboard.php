@@ -2,7 +2,7 @@
 
     <div class='block'>
     <div class='tables'>
-        <label for="userInfo">Changing informations</label>
+        <label for="userInfo" class='Hhome'>Changing informations</label>
         <table id='userInfo'>
         <thead>
             <tr>

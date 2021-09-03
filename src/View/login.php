@@ -19,13 +19,11 @@ require 'surround/header.php';
             </div> 
 
                 <div class="login">
-                    <form method='post'>
-                        <label for="username"></label>
+                    <form method='post' class='logForm'>
+                        <label for="username">Username :</label>
                         <input type="text" name="Login" id="username" class='username' placeholder="Username">
-                        <br>
-                        <label for="mdp"></label>
+                        <label for="mdp">Password :</label>
                         <input type="password" name="Password" id="mdp" class='mdp' placeholder="Password">
-                        <br>
                         <input type="submit" value="Login" class="log">
                     </form>
                 </div>

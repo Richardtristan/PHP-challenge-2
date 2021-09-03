@@ -1,3 +1,6 @@
+$font : 'Source Serif Pro', serif;
+$font_surround: 'Permanent Marker', cursive;
+
 .title {
     text-align: center;
     font-size:50px;
@@ -5,8 +8,8 @@
 
 .welcome {
     font-size: 30px;
-    margin-top: 100px;
-    margin-bottom: 200px;
+    margin-top: 30px;
+    //margin-bottom: 20px;
     text-align: center;
 }
 
@@ -20,7 +23,7 @@
     width: 250px;
     border-radius: 20px;
     text-align: center;
-    font-family: Didot, serif;
+    font-family: $font!important;
     font-size: 25px;
     z-index: 1;
 }
@@ -28,10 +31,10 @@
 .mdp {
     height: 40px;
     width: 250px;
-    margin-top: 30px;
+    //margin-top: 30px;
     border-radius: 20px;
     text-align: center;
-    font-family: Didot, serif;
+    font-family: $font !important;
     font-size: 25px;
     z-index: 1;
 
@@ -40,13 +43,26 @@
 .log {
     height: 40px;
     width: 250px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 15px;
     text-transform: uppercase;
-    font-family: Didot, serif;
+    font-family: $font;
     font-size: 20px;
 }
+
+.logForm {
+
+    align-items: center;
+    label {
+        margin: 5px;
+        padding: 20px;
+    }
+    :first-child {
+        margin-top: 80px;
+    }
+}
+
 
 // .image {
 //     position: relative;
