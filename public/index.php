@@ -4,7 +4,7 @@ require_once("router.php");
 use App\Model\Connect;
 use App\Model\WelcomeList;
 
-$connection = new Connect('127.0.0.1', 'cogip', 'root', '');
+$connection = new Connect('127.0.0.1', 'base', 'user', 'pass');
 $db = $connection->getPdo();
 
 
